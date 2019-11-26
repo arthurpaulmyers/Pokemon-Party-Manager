@@ -16,12 +16,26 @@ function pokeSubmit() {
         }
         else var pokeType2 = null;
         var imageURI = data.sprites.front_default;
-
+        var lengthPoke = data.moves.length;
+        console.log('Number of moves: ', lengthPoke)
         console.log("Number: ", pokeID);
         console.log("Name: ", pokeName);
         console.log("Type 1: ", pokeType1);
         console.log("Type 2: ", pokeType2);
         console.log("Image URI: ", imageURI);
+        console.log(data.moves[0].version_group_details[0].version_group.name)
+        var i;
+        for (i = 0; i < lengthPoke; i++) {
+            console.log(data.moves[i]);
+            console.log(data.moves[i].version_group_details[0]);
+            console.log(data.moves[i].version_group_details[0].version_group.name);
+            var numOfGamesWithMove = data.moves[i].version_group_details.length;
+            console.log("number of games", data.moves[i], "is available in: ", data.moves[i].version_group_details.length);
+            var m;
+            for (m = 0; m < numOfGamesWithMove; m++) {
+                console.log(data.moves[i].version_group_details[m].version_group.name)
+            }
+        }
 
         var li="";
         li += '<li><img src="' + imageURI + '">';

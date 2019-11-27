@@ -33,6 +33,7 @@ function pokeSubmit() {
         var pokeID = data.id;
         var pokeName = data.name;
         var pokeType1 = data.types[0].type.name;
+        var moveset = {};
         if (data.types.length == 2) {
             var pokeType2 = data.types[1].type.name;
         }
@@ -58,19 +59,26 @@ function pokeSubmit() {
                 if (data.moves[i].version_group_details[m].version_group.name === 'heartgold-soulsilver') {
                     if (data.moves[i].version_group_details[m].level_learned_at > 0) {
                         console.log(data.moves[i].move.name);
+                        var moveName = data.moves[i].move.name;
                         console.log(data.moves[i].version_group_details[m].level_learned_at);
+                        var moveLevel = data.moves[i].version_group_details[m].level_learned_at;
+                        moveset[moveName] = moveLevel;
                     }
                 }
             }
         }
 
-        var poke1 = new Pokemon(pokeName, pokeType1, pokeType2, '1', [], '1', 'yes', 'move1', 'move2', 'move3', 'move4', imageURI);
+        var poke1 = new Pokemon(pokeName, pokeType1, pokeType2, '1', moveset, '1', 'yes', 'move1', 'move2', 'move3', 'move4', imageURI);
+        
         if (party.length < 6) {
             party.push(poke1);
         }
         else {
             box.push(poke1);
         }
+
+        console.log(party);
+        console.log(box);
 
         //making it appear on the screen
         //var li="";
@@ -88,9 +96,6 @@ function pokeSubmit() {
         //li += '<p>Evolution Method: ' + poke1.evol + '</p>';
         //li += '<p>Slot: ' + poke1.slot + '</p>';
         //li += '</li>';
-
-        console.log(party);
-        console.log(box);
 
         //$("#pokeDetails").empty();
 

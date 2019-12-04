@@ -14,7 +14,44 @@
         <h1>Pokeapi Test</h1>
     </div>
     <div data-role="main" class="ui-content">
-        <form id="pokeForm" action="#pokeDetails-page" method="post">
+        <form id="chooseLocation" action="#" method="post">
+                <div>
+                    <label for="locList">Where did you find the Pokemon?</label>
+                    <select type="text" name="locList" id="locList" value="">
+                        <option value="starter">Starter Pokemon</option>
+                        <option value="route29">Route 29</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <a class="ui-btn" onclick="locSubmit();">Choose Location</a>
+                </div>
+        </form>
+        <form id="chooseSpecies" action="#" method="post">
+                <div>
+                    <label for="speciesList">What Pokemon did you find?</label>
+                    <select type="text" name="speciesList" id="speciesList" value="">
+                        <option value="species0"></option>
+                        <option value="species1"></option>
+                        <option value="species2"></option>
+                        <option value="species3"></option>
+                        <option value="species4"></option>
+                        <option value="species5"></option>
+                        <option value="species6"></option>
+                        <option value="species7"></option>
+                        <option value="species8"></option>
+                        <option value="species9"></option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <a class="ui-btn" onclick="pokeSubmit();">Choose Pokemon</a>
+                </div>
+                <!-- <div>
+                        <a class="ui-btn" onclick="LevelUp();">Level Up Pokemon</a>
+                </div> -->
+        </form>
+        <!-- <form id="pokeForm" action="#pokeDetails-page" method="post">
             <div>
                 <label for="pokeInput">Pokemon name or number:</label>
                 <input type="text" name="pokeInput" id="pokeInput" placeholder="Name/Number" value="">
@@ -23,10 +60,8 @@
             <div>
                 <a class="ui-btn" onclick="pokeSubmit();">Search</a>
             </div>
-        </form>
-    <div>
-    <ul data-role="listview" data-inset="true" id="pokeDetails">  
-    </ul>
-    </div>
+        </form> -->
+        <div id="yourPokemon">
+        </div>
     </div>
 </div>

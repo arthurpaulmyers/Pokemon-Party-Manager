@@ -1,14 +1,14 @@
 
 
 class Pokemon {
-    constructor(name, type1, type2, currLevel, moveslist, slot, getEvol, move1, move2, move3, move4, sprite, newSpecies) {
+    constructor(name, type1, type2, currLevel, moveslist, partySlot, getEvol, move1, move2, move3, move4, sprite, newSpecies) {
         //constructor(name, type1, type2, currLevel, moveslist, slot, getEvol, move1, move2, move3, move4, sprite, newSpecies, verified, movesKnown, newSpecies)
         this.name = name;
         this.type1 = type1;
         this.type2 = type2;
         this.currLevel = currLevel;
         this.moveslist = moveslist;
-        this.slot = slot;
+        this.partySlot = partySlot;
         this.getEvol = getEvol;
         this.move1 = move1;
         this.move2 = move2;
@@ -118,6 +118,7 @@ function pokeSubmit() {
 
         //determine moveset
         var moveslist = {};
+        var partySlot = party.length + 1;
 
         //determine evolution
         if (pokeName === "chikorita") {
@@ -196,13 +197,13 @@ function pokeSubmit() {
         }
         var imageURI = data.sprites.front_default;
         var lengthPoke = data.moves.length;
-        console.log('Number of moves: ', lengthPoke)
-        console.log("Number: ", pokeID);
-        console.log("Name: ", pokeName);
-        console.log("Type 1: ", pokeType1);
-        console.log("Type 2: ", pokeType2);
-        console.log("Image URI: ", imageURI);
-        console.log(data.moves[0].version_group_details[0].version_group.name)
+        // console.log('Number of moves: ', lengthPoke)
+        // console.log("Number: ", pokeID);
+        // console.log("Name: ", pokeName);
+        // console.log("Type 1: ", pokeType1);
+        // console.log("Type 2: ", pokeType2);
+        // console.log("Image URI: ", imageURI);
+        // console.log(data.moves[0].version_group_details[0].version_group.name)
         var i;
         for (i = 0; i < lengthPoke; i++) {
             //console.log(data.moves[i]);
@@ -224,7 +225,7 @@ function pokeSubmit() {
             }
         }
         //name, type1, type2, currLevel, moveslist, slot, getEvol, move1, move2, move3, move4, sprite, verified, movesKnown, newSpecies)
-        var poke1 = new Pokemon(pokeName, pokeType1, pokeType2, currLevel, moveslist, '1', getEvol, 'move1', 'move2', 'move3', 'move4', imageURI, newSpecies);
+        var poke1 = new Pokemon(pokeName, pokeType1, pokeType2, currLevel, moveslist, partySlot, getEvol, 'move1', 'move2', 'move3', 'move4', imageURI, newSpecies);
         
         if (party.length < 6) {
             party.push(poke1);
@@ -254,7 +255,8 @@ function pokeSubmit() {
         li += '<p id="move3">Move 3: ' + poke1.move3 + '</p>';
         li += '<p id="move4">Move 4: ' + poke1.move4 + '</p>';
         li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
-        li += '<p>Slot: ' + poke1.slot + '</p>';
+        li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
+        li += '<p>' + moveslist + '</p>';
         li += '<p>\
         <a class="ui-btn" onclick="LevelUp();">Level Up</a>\
         </p>'

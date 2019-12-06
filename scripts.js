@@ -1,7 +1,4 @@
-
-
 //create the Pokemon class
-
 class Pokemon {
     constructor(name, type1, type2, currLevel, moveslist, partySlot, getEvol, move1, move2, move3, move4, sprite, newSpecies) {
         //constructor(name, type1, type2, currLevel, moveslist, slot, getEvol, move1, move2, move3, move4, sprite, newSpecies, verified, movesKnown, newSpecies)
@@ -22,13 +19,51 @@ class Pokemon {
         //this.movesKnown = movesKnown;
     }
 }
-
+//
+//
+//
+//
+//
+//
 // initialize the Party and the Box
-
 var party = [];
 var box = [];
 var poke1, poke2, poke3, poke4, poke5, poke6 = '';
-
+//
+//
+//
+//
+//
+//make the button functions work
+//
+//
+//add new Pokemon button
+function startNewPokemon() {
+    if (party.length >= 6) {
+        //TO DO: Make this appear on the screen.
+        console.log("You already have a full party! Please come back later when Box functionality is updated.")
+    } else {
+        $("#yourCurrentPokemon").html('\
+        <br>\
+        <form id="chooseLocation" action="#" method="post">\
+                <div>\
+                    <label for="locList">Where did you find the Pokemon?</label>\
+                    <select type="text" name="locList" id="locList" value="">\
+                        <option value="starter">Starter Pokemon</option>\
+                        <option value="route29">Route 29</option>\
+                    </select>\
+                </div>\
+        <br>\
+                <div>\
+                    <a class="ui-btn" onclick="locSubmit();">Choose Location</a>\
+                </div>\
+        </form>    \
+        ');
+    }
+}
+//
+//
+//button 1
 function showPoke1(poke1) {
     if (typeof poke1 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
@@ -51,7 +86,7 @@ function showPoke1(poke1) {
         li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
         li += '<p>' + poke1.moveslist + '</p>';
         li += '<p>\
-        <a class="ui-btn" onclick="LevelUp();">Level Up</a>\
+        <a class="ui-btn" onclick="LevelUp(poke1);">Level Up</a>\
         </p>';
 
         //$("#pokeDetails").empty();
@@ -59,8 +94,9 @@ function showPoke1(poke1) {
         $("#yourCurrentPokemon").html(li);
     };
 }
-
-
+//
+//
+//button 2
 function showPoke2(poke2) {
     if (typeof poke2 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
@@ -83,7 +119,7 @@ function showPoke2(poke2) {
         li += '<p>This Pokemon is Party Member: ' + poke2.partySlot + '</p>';
         li += '<p>' + poke2.moveslist + '</p>';
         li += '<p>\
-        <a class="ui-btn" onclick="LevelUp();">Level Up</a>\
+        <a class="ui-btn" onclick="LevelUp(poke2);">Level Up</a>\
         </p>';
 
         //$("#pokeDetails").empty();
@@ -91,6 +127,9 @@ function showPoke2(poke2) {
         $("#yourCurrentPokemon").html(li);
     };
 }
+//
+//
+//button 3
 function showPoke3(poke3) {
     if (typeof poke3 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
@@ -113,7 +152,7 @@ function showPoke3(poke3) {
         li += '<p>This Pokemon is Party Member: ' + poke3.partySlot + '</p>';
         li += '<p>' + poke3.moveslist + '</p>';
         li += '<p>\
-        <a class="ui-btn" onclick="LevelUp();">Level Up</a>\
+        <a class="ui-btn" onclick="LevelUp(poke3);">Level Up</a>\
         </p>';
 
         //$("#pokeDetails").empty();
@@ -121,6 +160,9 @@ function showPoke3(poke3) {
         $("#yourCurrentPokemon").html(li);
     }
 }
+//
+//
+//button 4
 function showPoke4(poke4) {
     if (typeof poke4 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
@@ -143,7 +185,7 @@ function showPoke4(poke4) {
         li += '<p>This Pokemon is Party Member: ' + poke4.partySlot + '</p>';
         li += '<p>' + poke4.moveslist + '</p>';
         li += '<p>\
-        <a class="ui-btn" onclick="LevelUp();">Level Up</a>\
+        <a class="ui-btn" onclick="LevelUp(poke4);">Level Up</a>\
         </p>';
 
         //$("#pokeDetails").empty();
@@ -151,6 +193,9 @@ function showPoke4(poke4) {
         $("#yourCurrentPokemon").html(li);
     }
 }
+//
+//
+//button 5
 function showPoke5(poke5) {
     if (typeof poke5 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
@@ -173,7 +218,7 @@ function showPoke5(poke5) {
         li += '<p>This Pokemon is Party Member: ' + poke5.partySlot + '</p>';
         li += '<p>' + poke5.moveslist + '</p>';
         li += '<p>\
-        <a class="ui-btn" onclick="LevelUp();">Level Up</a>\
+        <a class="ui-btn" onclick="LevelUp(poke5);">Level Up</a>\
         </p>';
 
         //$("#pokeDetails").empty();
@@ -181,6 +226,9 @@ function showPoke5(poke5) {
         $("#yourCurrentPokemon").html(li);
     }
 }
+//
+//
+//button 6
 function showPoke6(poke6) {
     if (typeof poke6 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
@@ -203,7 +251,7 @@ function showPoke6(poke6) {
         li += '<p>This Pokemon is Party Member: ' + poke6.partySlot + '</p>';
         li += '<p>' + poke6.moveslist + '</p>';
         li += '<p>\
-        <a class="ui-btn" onclick="LevelUp();">Level Up</a>\
+        <a class="ui-btn" onclick="LevelUp(poke6);">Level Up</a>\
         </p>';
 
         //$("#pokeDetails").empty();
@@ -211,32 +259,14 @@ function showPoke6(poke6) {
         $("#yourCurrentPokemon").html(li);
     }
 }
-
-function startNewPokemon() {
-    if (party.length >= 6) {
-        console.log("You already have a full party! Please come back later when Box functionality is updated.")
-    } else {
-        $("#yourCurrentPokemon").html('\
-        <div data-role="main" class="ui-content">\
-        <form id="chooseLocation" action="#" method="post">\
-                <div>\
-                    <label for="locList">Where did you find the Pokemon?</label>\
-                    <select type="text" name="locList" id="locList" value="">\
-                        <option value="starter">Starter Pokemon</option>\
-                        <option value="route29">Route 29</option>\
-                    </select>\
-                </div>\
-        <br>\
-                <div>\
-                    <a class="ui-btn" onclick="locSubmit();">Choose Location</a>\
-                </div>\
-        </form>    \
-        ');
-    }
-}
-
+//
+//
+//
+//
+//
+//
+//
 // change the values of the species list based upon the location value selected
-
 function locSubmit() {
     var poke = document.getElementById("speciesList");
     var loc = document.getElementById("locList");
@@ -271,16 +301,12 @@ function locSubmit() {
     }
 }
 
-
-
-
-function LevelUp() {
-    if (currLevel != 100) {
-        currLevel+= 1;
-        console.log('added to chikorita level');
-        $('#currentLevel').text('Current Level: ' + currLevel);
-        $('#currentLevel').text('Current Level: ' + currLevel);
-        if (currLevel === getEvol) {
+function LevelUp(pokemon) {
+    if (pokemon.currLevel != 100) {
+        pokemon.currLevel+= 1;
+        console.log(pokemon.currLevel);
+        $('#currentLevel').text('Current Level: ' + pokemon.currLevel);
+        if (pokemon.currLevel === getEvol) {
             EvolCheck();
         }
         // else if (verified != true) {

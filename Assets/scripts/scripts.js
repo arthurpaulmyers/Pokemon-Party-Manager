@@ -21,10 +21,7 @@ class Pokemon {
 }
 //
 //
-//
-//
-//
-//
+
 // initialize the Party and the Box
 var party = [];
 var box = [];
@@ -32,8 +29,7 @@ var poke1, poke2, poke3, poke4, poke5, poke6 = '';
 //
 //
 //
-//
-//
+
 //make the button functions work
 //
 //
@@ -92,24 +88,35 @@ function showPoke1(poke1) {
     } else if (typeof poke1 === 'object') {
         console.log(poke1.name);
         var li="";
-        li += '<img src="' + poke1.sprite + '">';
-        li += '<h1 class="capitalizeName">' + poke1.name + '</h1>';
-        li += '<p>Type 1: ' + poke1.type1 + '</p>';
-        
+        li += '<div class="row">';
+        li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
+        li += '<img src="assets/img/pokeIMG/' + poke1.name + '.png">';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<h1 class="capitalizeName" id="name">' + poke1.name + '</h1>';
+        li += '<p>Type 1: <span id="type1">' + poke1.type1 + '</span></p>';
         if (poke1.type2 != null) {
-           li += '<p>Type 2: ' + poke1.type2 + '</p>';
+           li += '<p>Type 2: <spanid="type2"' + poke1.type2 + '</span></p>';
         }
-        li += '<p id="currentLevel">Current Level: ' + poke1.currLevel + '</p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">'
+        li += '<p id="currentLevel1">Current Level: ' + poke1.currLevel + '</p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<p>\
+        <a class="ui-btn" onclick="LevelUp(poke1);">Level Up</a>\
+        </p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">'
         li += '<p id="move1">Move 1: ' + poke1.move1 + '</p>';
         li += '<p id="move2">Move 2: ' + poke1.move2 + '</p>';
         li += '<p id="move3">Move 3: ' + poke1.move3 + '</p>';
         li += '<p id="move4">Move 4: ' + poke1.move4 + '</p>';
-        li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
-        li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
-        li += '<p>' + poke1.moveslist + '</p>';
-        li += '<p>\
-        <a class="ui-btn" onclick="LevelUp(poke1);">Level Up</a>\
-        </p>';
+        li += '</div>';
+        // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
+        // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
+        // li += '<p>' + poke1.moveslist + '</p>';
+        li += '</div>';
 
         //$("#pokeDetails").empty();
 
@@ -122,27 +129,38 @@ function showPoke1(poke1) {
 function showPoke2(poke2) {
     if (typeof poke2 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
-    } else {
+    } else if (typeof poke2 === 'object') {
         console.log(poke2.name);
         var li="";
-        li += '<img src="' + poke2.sprite + '">';
-        li += '<h1>' + poke2.name + '</h1>';
-        li += '<p>Type 1: ' + poke2.type1 + '</p>';
-        
+        li += '<div class="row">';
+        li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
+        li += '<img src="assets/img/pokeIMG/' + poke2.name + '.png">';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<h1 class="capitalizeName" id="name">' + poke2.name + '</h1>';
+        li += '<p>Type 1: <span id="type1">' + poke2.type1 + '</span></p>';
         if (poke2.type2 != null) {
-           li += '<p>Type 2: ' + poke2.type2 + '</p>';
+           li += '<p>Type 2: <spanid="type2"' + poke2.type2 + '</span></p>';
         }
-        li += '<p id="currentLevel">Current Level: ' + poke2.currLevel + '</p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">'
+        li += '<p id="currentLevel2">Current Level: ' + poke2.currLevel + '</p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<p>\
+        <a class="ui-btn" onclick="LevelUp(poke2);">Level Up</a>\
+        </p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">'
         li += '<p id="move1">Move 1: ' + poke2.move1 + '</p>';
         li += '<p id="move2">Move 2: ' + poke2.move2 + '</p>';
         li += '<p id="move3">Move 3: ' + poke2.move3 + '</p>';
         li += '<p id="move4">Move 4: ' + poke2.move4 + '</p>';
-        li += '<p id="evolutionsentence">Evolves at level ' + poke2.getEvol + ' into ' + poke2.newSpecies + '</p>';
-        li += '<p>This Pokemon is Party Member: ' + poke2.partySlot + '</p>';
-        li += '<p>' + poke2.moveslist + '</p>';
-        li += '<p>\
-        <a class="ui-btn" onclick="LevelUp(poke2);">Level Up</a>\
-        </p>';
+        li += '</div>';
+        // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
+        // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
+        // li += '<p>' + poke1.moveslist + '</p>';
+        li += '</div>';
 
         //$("#pokeDetails").empty();
 
@@ -155,32 +173,43 @@ function showPoke2(poke2) {
 function showPoke3(poke3) {
     if (typeof poke3 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
-    } else {
+    } else if (typeof poke3 === 'object') {
         console.log(poke3.name);
         var li="";
-        li += '<img src="' + poke3.sprite + '">';
-        li += '<h1>' + poke3.name + '</h1>';
-        li += '<p>Type 1: ' + poke3.type1 + '</p>';
-        
+        li += '<div class="row">';
+        li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
+        li += '<img src="assets/img/pokeIMG/' + poke3.name + '.png">';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<h1 class="capitalizeName" id="name">' + poke3.name + '</h1>';
+        li += '<p>Type 1: <span id="type1">' + poke3.type1 + '</span></p>';
         if (poke3.type2 != null) {
-           li += '<p>Type 2: ' + poke3.type2 + '</p>';
+           li += '<p>Type 2: <spanid="type2"' + poke3.type2 + '</span></p>';
         }
-        li += '<p id="currentLevel">Current Level: ' + poke3.currLevel + '</p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">'
+        li += '<p id="currentLevel2">Current Level: ' + poke3.currLevel + '</p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<p>\
+        <a class="ui-btn" onclick="LevelUp(poke3);">Level Up</a>\
+        </p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">'
         li += '<p id="move1">Move 1: ' + poke3.move1 + '</p>';
         li += '<p id="move2">Move 2: ' + poke3.move2 + '</p>';
         li += '<p id="move3">Move 3: ' + poke3.move3 + '</p>';
         li += '<p id="move4">Move 4: ' + poke3.move4 + '</p>';
-        li += '<p id="evolutionsentence">Evolves at level ' + poke3.getEvol + ' into ' + poke3.newSpecies + '</p>';
-        li += '<p>This Pokemon is Party Member: ' + poke3.partySlot + '</p>';
-        li += '<p>' + poke3.moveslist + '</p>';
-        li += '<p>\
-        <a class="ui-btn" onclick="LevelUp(poke3);">Level Up</a>\
-        </p>';
+        li += '</div>';
+        // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
+        // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
+        // li += '<p>' + poke1.moveslist + '</p>';
+        li += '</div>';
 
         //$("#pokeDetails").empty();
 
         $("#yourCurrentPokemon").html(li);
-    }
+    };
 }
 //
 //
@@ -188,32 +217,43 @@ function showPoke3(poke3) {
 function showPoke4(poke4) {
     if (typeof poke4 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
-    } else {
-        console.log(poke4.name);
+    } else if (typeof poke2 === 'object') {
+        console.log(poke2.name);
         var li="";
-        li += '<img src="' + poke4.sprite + '">';
-        li += '<h1>' + poke4.name + '</h1>';
-        li += '<p>Type 1: ' + poke4.type1 + '</p>';
-        
+        li += '<div class="row">';
+        li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
+        li += '<img src="assets/img/pokeIMG/' + poke4.name + '.png">';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<h1 class="capitalizeName" id="name">' + poke4.name + '</h1>';
+        li += '<p>Type 1: <span id="type1">' + poke4.type1 + '</span></p>';
         if (poke4.type2 != null) {
-           li += '<p>Type 2: ' + poke4.type2 + '</p>';
+           li += '<p>Type 2: <spanid="type2"' + poke4.type2 + '</span></p>';
         }
-        li += '<p id="currentLevel">Current Level: ' + poke4.currLevel + '</p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">'
+        li += '<p id="currentLevel2">Current Level: ' + poke4.currLevel + '</p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<p>\
+        <a class="ui-btn" onclick="LevelUp(poke4);">Level Up</a>\
+        </p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">'
         li += '<p id="move1">Move 1: ' + poke4.move1 + '</p>';
         li += '<p id="move2">Move 2: ' + poke4.move2 + '</p>';
         li += '<p id="move3">Move 3: ' + poke4.move3 + '</p>';
         li += '<p id="move4">Move 4: ' + poke4.move4 + '</p>';
-        li += '<p id="evolutionsentence">Evolves at level ' + poke4.getEvol + ' into ' + poke4.newSpecies + '</p>';
-        li += '<p>This Pokemon is Party Member: ' + poke4.partySlot + '</p>';
-        li += '<p>' + poke4.moveslist + '</p>';
-        li += '<p>\
-        <a class="ui-btn" onclick="LevelUp(poke4);">Level Up</a>\
-        </p>';
+        li += '</div>';
+        // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
+        // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
+        // li += '<p>' + poke1.moveslist + '</p>';
+        li += '</div>';
 
         //$("#pokeDetails").empty();
 
         $("#yourCurrentPokemon").html(li);
-    }
+    };
 }
 //
 //
@@ -221,32 +261,43 @@ function showPoke4(poke4) {
 function showPoke5(poke5) {
     if (typeof poke5 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
-    } else {
+    } else if (typeof poke2 === 'object') {
         console.log(poke5.name);
         var li="";
-        li += '<img src="' + poke5.sprite + '">';
-        li += '<h1>' + poke5.name + '</h1>';
-        li += '<p>Type 1: ' + poke5.type1 + '</p>';
-        
+        li += '<div class="row">';
+        li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
+        li += '<img src="assets/img/pokeIMG/' + poke5.name + '.png">';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<h1 class="capitalizeName" id="name">' + poke5.name + '</h1>';
+        li += '<p>Type 1: <span id="type1">' + poke5.type1 + '</span></p>';
         if (poke5.type2 != null) {
-           li += '<p>Type 2: ' + poke5.type2 + '</p>';
+           li += '<p>Type 2: <spanid="type2"' + poke5.type2 + '</span></p>';
         }
-        li += '<p id="currentLevel">Current Level: ' + poke5.currLevel + '</p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">'
+        li += '<p id="currentLevel2">Current Level: ' + poke5.currLevel + '</p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<p>\
+        <a class="ui-btn" onclick="LevelUp(poke5);">Level Up</a>\
+        </p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">'
         li += '<p id="move1">Move 1: ' + poke5.move1 + '</p>';
         li += '<p id="move2">Move 2: ' + poke5.move2 + '</p>';
         li += '<p id="move3">Move 3: ' + poke5.move3 + '</p>';
         li += '<p id="move4">Move 4: ' + poke5.move4 + '</p>';
-        li += '<p id="evolutionsentence">Evolves at level ' + poke5.getEvol + ' into ' + poke5.newSpecies + '</p>';
-        li += '<p>This Pokemon is Party Member: ' + poke5.partySlot + '</p>';
-        li += '<p>' + poke5.moveslist + '</p>';
-        li += '<p>\
-        <a class="ui-btn" onclick="LevelUp(poke5);">Level Up</a>\
-        </p>';
+        li += '</div>';
+        // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
+        // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
+        // li += '<p>' + poke1.moveslist + '</p>';
+        li += '</div>';
 
         //$("#pokeDetails").empty();
 
         $("#yourCurrentPokemon").html(li);
-    }
+    };
 }
 //
 //
@@ -254,32 +305,43 @@ function showPoke5(poke5) {
 function showPoke6(poke6) {
     if (typeof poke6 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
-    } else {
+    } else if (typeof poke6 === 'object') {
         console.log(poke6.name);
         var li="";
-        li += '<img src="' + poke6.sprite + '">';
-        li += '<h1>' + poke6.name + '</h1>';
-        li += '<p>Type 1: ' + poke6.type1 + '</p>';
-        
+        li += '<div class="row">';
+        li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
+        li += '<img src="assets/img/pokeIMG/' + poke6.name + '.png">';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<h1 class="capitalizeName" id="name">' + poke6.name + '</h1>';
+        li += '<p>Type 1: <span id="type1">' + poke6.type1 + '</span></p>';
         if (poke6.type2 != null) {
-           li += '<p>Type 2: ' + poke6.type2 + '</p>';
+           li += '<p>Type 2: <spanid="type2"' + poke6.type2 + '</span></p>';
         }
-        li += '<p id="currentLevel">Current Level: ' + poke6.currLevel + '</p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">'
+        li += '<p id="currentLevel2">Current Level: ' + poke6.currLevel + '</p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<p>\
+        <a class="ui-btn" onclick="LevelUp(poke6);">Level Up</a>\
+        </p>';
+        li += '</div>';
+        li += '<div class="col-lg-4 col-md-4 col-s-12">'
         li += '<p id="move1">Move 1: ' + poke6.move1 + '</p>';
         li += '<p id="move2">Move 2: ' + poke6.move2 + '</p>';
         li += '<p id="move3">Move 3: ' + poke6.move3 + '</p>';
         li += '<p id="move4">Move 4: ' + poke6.move4 + '</p>';
-        li += '<p id="evolutionsentence">Evolves at level ' + poke6.getEvol + ' into ' + poke1.newSpecies + '</p>';
-        li += '<p>This Pokemon is Party Member: ' + poke6.partySlot + '</p>';
-        li += '<p>' + poke6.moveslist + '</p>';
-        li += '<p>\
-        <a class="ui-btn" onclick="LevelUp(poke6);">Level Up</a>\
-        </p>';
+        li += '</div>';
+        // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
+        // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
+        // li += '<p>' + poke1.moveslist + '</p>';
+        li += '</div>';
 
         //$("#pokeDetails").empty();
 
         $("#yourCurrentPokemon").html(li);
-    }
+    };
 }
 //
 //
@@ -327,13 +389,55 @@ function locSubmit() {
 }
 
 function LevelUp(pokemon) {
-    if (pokemon.currLevel != 100) {
-        pokemon.currLevel+= 1;
-        console.log(pokemon.currLevel);
-        $('#currentLevel').text('Current Level: ' + pokemon.currLevel);
-        if (pokemon.currLevel === getEvol) {
-            EvolCheck();
+    if (pokemon.partySlot == 1) {
+        if (pokemon.currLevel != 100) {
+            pokemon.currLevel+= 1;
+            $('#currentLevel1').text('Current Level: ' + pokemon.currLevel);
+            if (pokemon.currLevel === pokemon.getEvol) {
+                EvolCheck(pokemon);
+            }
         }
+    } else if (pokemon.partySlot == 2) {
+        if (pokemon.currLevel != 100) {
+            pokemon.currLevel+= 1;
+            $('#currentLevel2').text('Current Level: ' + pokemon.currLevel);
+            if (pokemon.currLevel === pokemon.getEvol) {
+                EvolCheck(pokemon);
+            }
+        }
+    } else if (pokemon.partySlot == 3) {
+        if (pokemon.currLevel != 100) {
+            pokemon.currLevel+= 1;
+            $('#currentLevel3').text('Current Level: ' + pokemon.currLevel);
+            if (pokemon.currLevel === pokemon.getEvol) {
+                EvolCheck(pokemon);
+            }
+        }
+    } else if (pokemon.partySlot == 4) {
+        if (pokemon.currLevel != 100) {
+            pokemon.currLevel+= 1;
+            $('#currentLevel4').text('Current Level: ' + pokemon.currLevel);
+            if (pokemon.currLevel === pokemon.getEvol) {
+                EvolCheck(pokemon);
+            }
+        }
+    } else if (pokemon.partySlot == 5) {
+        if (pokemon.currLevel != 100) {
+            pokemon.currLevel+= 1;
+            $('#currentLevel5').text('Current Level: ' + pokemon.currLevel);
+            if (pokemon.currLevel === pokemon.getEvol) {
+                EvolCheck(pokemon);
+            }
+        }
+    } else if (pokemon.partySlot == 6) {
+        if (pokemon.currLevel != 100) {
+            pokemon.currLevel+= 1;
+            $('#currentLevel6').text('Current Level: ' + pokemon.currLevel);
+            if (pokemon.currLevel === pokemon.getEvol) {
+                EvolCheck(pokemon);
+            }
+        }
+    }
         // else if (verified != true) {
         //     VerificationCheck();
         // }
@@ -342,7 +446,111 @@ function LevelUp(pokemon) {
         //         LearnMove();
         //     }
         // }
-    }
+}
+
+function EvolCheck(pokemon) {
+    console.log('checking evolution');
+    var newPokeURL = "https://cors-anywhere.herokuapp.com/http://pokeapi.co/api/v1/pokemon/" + pokemon.newSpecies;
+    $.getJSON(newPokeURL, function(data) {
+        var newPokeType1 = data.types[0].type.name;
+        if (data.types.length == 2) {
+            var newPokeType2 = data.types[1].type.name;
+        }
+        else var newpokeType2 = null;
+
+        if (pokemon.newSpecies === "bayleef") {
+            newGetEvol = 32;
+            newNewSpecies = 'meganium';
+        } else if (pokemon.newSpecies === "quilava") {
+            newGetEvol = 36;
+            newNewSpecies = 'typhlosion';
+        } else if (pokemon.newSpecies === "croconaw") {
+            newGetEvol = 30;
+            newNewSpecies = 'feraligatr';
+        } else if (pokemon.newSpecies === "pidgeotto") {
+            newGetEvol = 36;
+            newNewSpecies = 'pidgeot';
+        } else if (pokemon.newSpecies === "meganium") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        } else if (pokemon.newSpecies === "typhlosion") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        } else if (pokemon.newSpecies === "feraligatr") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        } else if (pokemon.newSpecies === "pidgeot") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        } else if (pokemon.newSpecies === "raticate") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        } else if (pokemon.newSpecies === "noctowl") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        } else if (pokemon.newSpecies === "furret") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        }
+        var newMovesList = {};
+        var newLengthPoke = data.moves.length;
+        // console.log('Number of moves: ', lengthPoke)
+        // console.log("Number: ", pokeID);
+        // console.log("Name: ", pokeName);
+        // console.log("Type 1: ", pokeType1);
+        // console.log("Type 2: ", pokeType2);
+        // console.log("Image URI: ", imageURI);
+        // console.log(data.moves[0].version_group_details[0].version_group.name)
+        var i;
+        for (i = 0; i < newLengthPoke; i++) {
+            //console.log(data.moves[i]);
+            //console.log(data.moves[i].version_group_details[0]);
+            //console.log(data.moves[i].version_group_details[0].version_group.name);
+            var numOfGamesWithMove = data.moves[i].version_group_details.length;
+            //console.log("number of games", data.moves[i], "is available in: ", data.moves[i].version_group_details.length);
+            var m;
+            for (m = 0; m < numOfGamesWithMove; m++) {
+                if (data.moves[i].version_group_details[m].version_group.name === 'heartgold-soulsilver') {
+                    if (data.moves[i].version_group_details[m].level_learned_at > 0) {
+                        console.log(data.moves[i].move.name);
+                        var moveName = data.moves[i].move.name;
+                        console.log(data.moves[i].version_group_details[m].level_learned_at);
+                        var moveLevel = data.moves[i].version_group_details[m].level_learned_at;
+                        newMovesList[moveName] = moveLevel;
+                    }
+                }
+            }
+        }
+        pokemon.moveslist = newMovesList;
+        pokemon.type1 = newPokeType1;
+        if (newPokeType2 != null) {
+            pokemon.type2 = newPokeType2;
+        }
+        pokemon.getEvol = newGetEvol;
+        pokemon.name = pokemon.newSpecies;
+        $('#name').text(pokemon.name);
+        if (pokemon.partySlot == 1) {
+            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke1.name + '.png">');
+        } else if (pokemon.partySlot == 2) {
+            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke2.name + '.png">');
+        } else if (pokemon.partySlot == 3) {
+            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke3.name + '.png">');
+        } else if (pokemon.partySlot == 4) {
+            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke4.name + '.png">');
+        } else if (pokemon.partySlot == 5) {
+            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke5.name + '.png">');
+        } else if (pokemon.partySlot == 6) {
+            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke6.name + '.png">');
+        }
+        pokemon.newSpecies = newNewSpecies;
+        $('#type1').html(pokemon.type1);
+        if (pokemon.type2 != null) {
+            $('#type2').html(pokemon.type2);
+        }
+    });
+    console.log(pokemon);
+    //if (pokemon.partySlot === '1') {
+    //}
 }
 
 
@@ -378,57 +586,24 @@ function pokeSubmit() {
         if (pokeName === "chikorita") {
             getEvol = 16;
             newSpecies = 'bayleef';
-        } else if (pokeName === "bayleef") {
-            getEvol = 32;
-            newSpecies = 'meganium';
         } else if (pokeName === "cyndaquil") {
             getEvol = 14;
             newSpecies = 'quilava';
-        } else if (pokeName === "quilava") {
-            getEvol = 36;
-            newSpecies = 'typhlosion';
         } else if (pokeName === "totodile") {
             getEvol = 18;
             newSpecies = 'croconaw';
-        } else if (pokeName === "croconaw") {
-            getEvol = 30;
-            newSpecies = 'feraligatr';
         } else if (pokeName === "rattata") {
             getEvol = 20;
             newSpecies = 'raticate';
         } else if (pokeName === "pidgey") {
             getEvol = 18;
             newSpecies = 'pidgeotto';
-        } else if (pokeName === "pidgeotto") {
-            getEvol = 36;
-            newSpecies = 'pidgeot';
         } else if (pokeName === "hoothoot") {
             getEvol = 20;
             newSpecies = 'noctowl';
         } else if (pokeName === "sentret") {
             getEvol = 15;
             newSpecies = 'furret';
-        } else if (pokeName === "meganium") {
-            getEvol = 101;
-            newSpecies = 'none';
-        } else if (pokeName === "typhlosion") {
-            getEvol = 101;
-            newSpecies = 'none';
-        } else if (pokeName === "feraligatr") {
-            getEvol = 101;
-            newSpecies = 'none';
-        } else if (pokeName === "pidgeot") {
-            getEvol = 101;
-            newSpecies = 'none';
-        } else if (pokeName === "raticate") {
-            getEvol = 101;
-            newSpecies = 'none';
-        } else if (pokeName === "noctowl") {
-            getEvol = 101;
-            newSpecies = 'none';
-        } else if (pokeName === "furret") {
-            getEvol = 101;
-            newSpecies = 'none';
         }
 
 

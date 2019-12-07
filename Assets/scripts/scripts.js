@@ -88,7 +88,7 @@ function showPoke1(poke1) {
         var li="";
         li += '<div class="row">';
         li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
-        li += '<img src="assets/img/pokeIMG/' + poke1.name + '.png">';
+        li += '<img src="Assets/img/pokeIMG/' + poke1.name + '.png">';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">';
         li += '<h1 class="capitalizeName" id="name">' + poke1.name + '</h1>';
@@ -136,7 +136,7 @@ function showPoke2(poke2) {
         var li="";
         li += '<div class="row">';
         li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
-        li += '<img src="assets/img/pokeIMG/' + poke2.name + '.png">';
+        li += '<img src="Assets/img/pokeIMG/' + poke2.name + '.png">';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">';
         li += '<h1 class="capitalizeName" id="name">' + poke2.name + '</h1>';
@@ -184,7 +184,7 @@ function showPoke3(poke3) {
         var li="";
         li += '<div class="row">';
         li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
-        li += '<img src="assets/img/pokeIMG/' + poke3.name + '.png">';
+        li += '<img src="Assets/img/pokeIMG/' + poke3.name + '.png">';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">';
         li += '<h1 class="capitalizeName" id="name">' + poke3.name + '</h1>';
@@ -232,7 +232,7 @@ function showPoke4(poke4) {
         var li="";
         li += '<div class="row">';
         li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
-        li += '<img src="assets/img/pokeIMG/' + poke4.name + '.png">';
+        li += '<img src="Assets/img/pokeIMG/' + poke4.name + '.png">';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">';
         li += '<h1 class="capitalizeName" id="name">' + poke4.name + '</h1>';
@@ -280,7 +280,7 @@ function showPoke5(poke5) {
         var li="";
         li += '<div class="row">';
         li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
-        li += '<img src="assets/img/pokeIMG/' + poke5.name + '.png">';
+        li += '<img src="Assets/img/pokeIMG/' + poke5.name + '.png">';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">';
         li += '<h1 class="capitalizeName" id="name">' + poke5.name + '</h1>';
@@ -328,7 +328,7 @@ function showPoke6(poke6) {
         var li="";
         li += '<div class="row">';
         li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
-        li += '<img src="assets/img/pokeIMG/' + poke6.name + '.png">';
+        li += '<img src="Assets/img/pokeIMG/' + poke6.name + '.png">';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">';
         li += '<h1 class="capitalizeName" id="name">' + poke6.name + '</h1>';
@@ -745,22 +745,22 @@ function EvolCheck(pokemon) {
         pokemon.name = pokemon.newSpecies;
         $('#name').text(pokemon.name);
         if (pokemon.partySlot == 1) {
-            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke1.name + '.png">');
+            $('#pokemonImage').html('<img src="Assets/img/pokeIMG/' + poke1.name + '.png">');
             $("#poke1button").text(pokemon.name);
         } else if (pokemon.partySlot == 2) {
-            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke2.name + '.png">');
+            $('#pokemonImage').html('<img src="Assets/img/pokeIMG/' + poke2.name + '.png">');
             $("#poke2button").text(pokemon.name);
         } else if (pokemon.partySlot == 3) {
-            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke3.name + '.png">');
+            $('#pokemonImage').html('<img src="Assets/img/pokeIMG/' + poke3.name + '.png">');
             $("#poke3button").text(pokemon.name);
         } else if (pokemon.partySlot == 4) {
-            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke4.name + '.png">');
+            $('#pokemonImage').html('<img src="Assets/img/pokeIMG/' + poke4.name + '.png">');
             $("#poke4button").text(pokemon.name);
         } else if (pokemon.partySlot == 5) {
-            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke5.name + '.png">');
+            $('#pokemonImage').html('<img src="Assets/img/pokeIMG/' + poke5.name + '.png">');
             $("#poke5button").text(pokemon.name);
         } else if (pokemon.partySlot == 6) {
-            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke6.name + '.png">');
+            $('#pokemonImage').html('<img src="Assets/img/pokeIMG/' + poke6.name + '.png">');
             $("#poke6button").text(pokemon.name);
         }
         pokemon.newSpecies = newNewSpecies;

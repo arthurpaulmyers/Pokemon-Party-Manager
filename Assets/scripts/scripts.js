@@ -531,16 +531,22 @@ function EvolCheck(pokemon) {
         $('#name').text(pokemon.name);
         if (pokemon.partySlot == 1) {
             $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke1.name + '.png">');
+            $("#poke1button").text(pokemon.name);
         } else if (pokemon.partySlot == 2) {
             $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke2.name + '.png">');
+            $("#poke2button").text(pokemon.name);
         } else if (pokemon.partySlot == 3) {
             $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke3.name + '.png">');
+            $("#poke3button").text(pokemon.name);
         } else if (pokemon.partySlot == 4) {
             $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke4.name + '.png">');
+            $("#poke4button").text(pokemon.name);
         } else if (pokemon.partySlot == 5) {
             $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke5.name + '.png">');
+            $("#poke5button").text(pokemon.name);
         } else if (pokemon.partySlot == 6) {
             $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke6.name + '.png">');
+            $("#poke6button").text(pokemon.name);
         }
         pokemon.newSpecies = newNewSpecies;
         $('#type1').html(pokemon.type1);

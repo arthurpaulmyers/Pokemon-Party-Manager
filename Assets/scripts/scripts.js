@@ -25,7 +25,7 @@ class Pokemon {
 // initialize the Party and the Box
 var party = [];
 var box = [];
-var poke1, poke2, poke3, poke4, poke5, poke6 = '';
+var poke1, poke2, poke3, poke4, poke5, poke6;
 //
 //
 //
@@ -85,6 +85,18 @@ function startNewPokemon() {
 function showPoke1(poke1) {
     if (typeof poke1 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
+        $("#yourCurrentPokemon").html('\
+        <br>\
+        <div class="container">\
+        <div class="row">\
+        <div class="col">\
+        <p>\
+        You have not added a first Pokemon to your team! Select the Add Team Member option from the nav bar.\
+        </p>\
+        </div>\
+        </div>\
+        </div>\
+        ');
     } else if (typeof poke1 === 'object') {
         console.log(poke1.name);
         var li="";
@@ -129,6 +141,18 @@ function showPoke1(poke1) {
 function showPoke2(poke2) {
     if (typeof poke2 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
+        $("#yourCurrentPokemon").html('\
+        <br>\
+        <div class="container">\
+        <div class="row">\
+        <div class="col">\
+        <p>\
+        You have not added a second Pokemon to your team! Select the Add Team Member option from the nav bar.\
+        </p>\
+        </div>\
+        </div>\
+        </div>\
+        ');
     } else if (typeof poke2 === 'object') {
         console.log(poke2.name);
         var li="";
@@ -173,6 +197,18 @@ function showPoke2(poke2) {
 function showPoke3(poke3) {
     if (typeof poke3 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
+        $("#yourCurrentPokemon").html('\
+        <br>\
+        <div class="container">\
+        <div class="row">\
+        <div class="col">\
+        <p>\
+        You have not added a third Pokemon to your team! Select the Add Team Member option from the nav bar.\
+        </p>\
+        </div>\
+        </div>\
+        </div>\
+        ');
     } else if (typeof poke3 === 'object') {
         console.log(poke3.name);
         var li="";
@@ -188,7 +224,7 @@ function showPoke3(poke3) {
         }
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
-        li += '<p id="currentLevel2">Current Level: ' + poke3.currLevel + '</p>';
+        li += '<p id="currentLevel3">Current Level: ' + poke3.currLevel + '</p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">';
         li += '<p>\
@@ -217,6 +253,18 @@ function showPoke3(poke3) {
 function showPoke4(poke4) {
     if (typeof poke4 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
+        $("#yourCurrentPokemon").html('\
+        <br>\
+        <div class="container">\
+        <div class="row">\
+        <div class="col">\
+        <p>\
+        You have not added a fourth Pokemon to your team! Select the Add Team Member option from the nav bar.\
+        </p>\
+        </div>\
+        </div>\
+        </div>\
+        ');
     } else if (typeof poke2 === 'object') {
         console.log(poke2.name);
         var li="";
@@ -232,7 +280,7 @@ function showPoke4(poke4) {
         }
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
-        li += '<p id="currentLevel2">Current Level: ' + poke4.currLevel + '</p>';
+        li += '<p id="currentLevel4">Current Level: ' + poke4.currLevel + '</p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">';
         li += '<p>\
@@ -261,6 +309,18 @@ function showPoke4(poke4) {
 function showPoke5(poke5) {
     if (typeof poke5 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
+        $("#yourCurrentPokemon").html('\
+        <br>\
+        <div class="container">\
+        <div class="row">\
+        <div class="col">\
+        <p>\
+        You have not added a fifth Pokemon to your team! Select the Add Team Member option from the nav bar.\
+        </p>\
+        </div>\
+        </div>\
+        </div>\
+        ');
     } else if (typeof poke2 === 'object') {
         console.log(poke5.name);
         var li="";
@@ -276,7 +336,7 @@ function showPoke5(poke5) {
         }
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
-        li += '<p id="currentLevel2">Current Level: ' + poke5.currLevel + '</p>';
+        li += '<p id="currentLevel5">Current Level: ' + poke5.currLevel + '</p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">';
         li += '<p>\
@@ -305,6 +365,18 @@ function showPoke5(poke5) {
 function showPoke6(poke6) {
     if (typeof poke6 === 'undefined') {
         console.log("You haven't added this Pokemon to the team yet!")
+        $("#yourCurrentPokemon").html('\
+        <br>\
+        <div class="container">\
+        <div class="row">\
+        <div class="col">\
+        <p>\
+        You have not added a sixth Pokemon to your team! Select the Add Team Member option from the nav bar.\
+        </p>\
+        </div>\
+        </div>\
+        </div>\
+        ');
     } else if (typeof poke6 === 'object') {
         console.log(poke6.name);
         var li="";
@@ -320,7 +392,7 @@ function showPoke6(poke6) {
         }
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
-        li += '<p id="currentLevel2">Current Level: ' + poke6.currLevel + '</p>';
+        li += '<p id="currentLevel6">Current Level: ' + poke6.currLevel + '</p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">';
         li += '<p>\
@@ -516,7 +588,7 @@ function EvolCheck(pokemon) {
                         var moveName = data.moves[i].move.name;
                         console.log(data.moves[i].version_group_details[m].level_learned_at);
                         var moveLevel = data.moves[i].version_group_details[m].level_learned_at;
-                        newMovesList[moveName] = moveLevel;
+                        newMovesList[moveLevel] = moveName;
                     }
                 }
             }
@@ -653,14 +725,34 @@ function pokeSubmit() {
                         console.log(data.moves[i].move.name);
                         var moveName = data.moves[i].move.name;
                         console.log(data.moves[i].version_group_details[m].level_learned_at);
-                        var moveLevel = data.moves[i].version_group_details[m].level_learned_at;
-                        moveslist[moveName] = moveLevel;
+                        if (!((data.moves[i].version_group_details[m].level_learned_at) in moveslist)) {
+                            var moveLevel = data.moves[i].version_group_details[m].level_learned_at;
+                            console.log('A move with the level' + moveLevel + ' has not been in the moveset');
+                        } else {
+                            var moveLevel = ((data.moves[i].version_group_details[m].level_learned_at) + 1);
+                        }
+                        moveslist[(moveLevel)] = moveName;
                     }
                 }
             }
         }
+        var move1, move2, move3, move4;
+
+        var j;
+        for (j=0; j <= currLevel; j++) {
+            for (var key in moveslist) {
+                if (moveslist.hasOwnProperty(j)) {
+                    if (typeof move1 === 'undefined') {
+                        move1 = moveslist[j];
+                    } else {
+                        move2 = moveslist[j];
+                    }
+                }
+            }
+        }
+
         //name, type1, type2, currLevel, moveslist, slot, getEvol, move1, move2, move3, move4, sprite, verified, movesKnown, newSpecies)
-        var pokemon = new Pokemon(pokeName, pokeType1, pokeType2, currLevel, moveslist, partySlot, getEvol, 'move1', 'move2', 'move3', 'move4', imageURI, newSpecies);
+        var pokemon = new Pokemon(pokeName, pokeType1, pokeType2, currLevel, moveslist, partySlot, getEvol, move1, move2, move3, move4, imageURI, newSpecies);
         
         if (party.length < 6) {
             party.push(pokemon);

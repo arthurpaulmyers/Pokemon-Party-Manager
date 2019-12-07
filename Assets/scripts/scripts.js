@@ -120,10 +120,10 @@ function showPoke1(poke1) {
         </p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
-        li += '<p id="move1">Move 1: ' + poke1.move1 + '</p>';
-        li += '<p id="move2">Move 2: ' + poke1.move2 + '</p>';
-        li += '<p id="move3">Move 3: ' + poke1.move3 + '</p>';
-        li += '<p id="move4">Move 4: ' + poke1.move4 + '</p>';
+        li += '<p>Move 1: <span id="move1">' + poke1.move1 + '</span></p>';
+        li += '<p>Move 2: <span id="move2">' + poke1.move2 + '</span></p>';
+        li += '<p>Move 3: <span id="move3">' + poke1.move3 + '</span></p>';
+        li += '<p>Move 4: <span id="move4">' + poke1.move4 + '</span></p>';
         li += '</div>';
         // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
         // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
@@ -176,10 +176,10 @@ function showPoke2(poke2) {
         </p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
-        li += '<p id="move1">Move 1: ' + poke2.move1 + '</p>';
-        li += '<p id="move2">Move 2: ' + poke2.move2 + '</p>';
-        li += '<p id="move3">Move 3: ' + poke2.move3 + '</p>';
-        li += '<p id="move4">Move 4: ' + poke2.move4 + '</p>';
+        li += '<p>Move 1: <span id="move1">' + poke2.move1 + '</span></p>';
+        li += '<p>Move 2: <span id="move2">' + poke2.move2 + '</span></p>';
+        li += '<p>Move 3: <span id="move3">' + poke2.move3 + '</span></p>';
+        li += '<p>Move 4: <span id="move4">' + poke2.move4 + '</span></p>';
         li += '</div>';
         // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
         // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
@@ -232,10 +232,10 @@ function showPoke3(poke3) {
         </p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
-        li += '<p id="move1">Move 1: ' + poke3.move1 + '</p>';
-        li += '<p id="move2">Move 2: ' + poke3.move2 + '</p>';
-        li += '<p id="move3">Move 3: ' + poke3.move3 + '</p>';
-        li += '<p id="move4">Move 4: ' + poke3.move4 + '</p>';
+        li += '<p>Move 1: <span id="move1">' + poke3.move1 + '</span></p>';
+        li += '<p>Move 2: <span id="move2">' + poke3.move2 + '</span></p>';
+        li += '<p>Move 3: <span id="move3">' + poke3.move3 + '</span></p>';
+        li += '<p>Move 4: <span id="move4">' + poke3.move4 + '</span></p>';
         li += '</div>';
         // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
         // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
@@ -288,10 +288,10 @@ function showPoke4(poke4) {
         </p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
-        li += '<p id="move1">Move 1: ' + poke4.move1 + '</p>';
-        li += '<p id="move2">Move 2: ' + poke4.move2 + '</p>';
-        li += '<p id="move3">Move 3: ' + poke4.move3 + '</p>';
-        li += '<p id="move4">Move 4: ' + poke4.move4 + '</p>';
+        li += '<p>Move 1: <span id="move1">' + poke4.move1 + '</span></p>';
+        li += '<p>Move 2: <span id="move2">' + poke4.move2 + '</span></p>';
+        li += '<p>Move 3: <span id="move3">' + poke4.move3 + '</span></p>';
+        li += '<p>Move 4: <span id="move4">' + poke4.move4 + '</span></p>';
         li += '</div>';
         // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
         // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
@@ -344,10 +344,10 @@ function showPoke5(poke5) {
         </p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
-        li += '<p id="move1">Move 1: ' + poke5.move1 + '</p>';
-        li += '<p id="move2">Move 2: ' + poke5.move2 + '</p>';
-        li += '<p id="move3">Move 3: ' + poke5.move3 + '</p>';
-        li += '<p id="move4">Move 4: ' + poke5.move4 + '</p>';
+        li += '<p>Move 1: <span id="move1">' + poke5.move1 + '</span></p>';
+        li += '<p>Move 2: <span id="move2">' + poke5.move2 + '</span></p>';
+        li += '<p>Move 3: <span id="move3">' + poke5.move3 + '</span></p>';
+        li += '<p>Move 4: <span id="move4">' + poke5.move4 + '</span></p>';
         li += '</div>';
         // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
         // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
@@ -400,10 +400,10 @@ function showPoke6(poke6) {
         </p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
-        li += '<p id="move1">Move 1: ' + poke6.move1 + '</p>';
-        li += '<p id="move2">Move 2: ' + poke6.move2 + '</p>';
-        li += '<p id="move3">Move 3: ' + poke6.move3 + '</p>';
-        li += '<p id="move4">Move 4: ' + poke6.move4 + '</p>';
+        li += '<p>Move 1: <span id="move1">' + poke6.move1 + '</span></p>';
+        li += '<p>Move 2: <span id="move2">' + poke6.move2 + '</span></p>';
+        li += '<p>Move 3: <span id="move3">' + poke6.move3 + '</span></p>';
+        li += '<p>Move 4: <span id="move4">' + poke6.move4 + '</span></p>';
         li += '</div>';
         // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
         // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
@@ -460,6 +460,43 @@ function locSubmit() {
     }
 }
 
+function LearnMove(pokemon) {
+    if (typeof(pokemon.move1) !== 'undefined') {
+        console.log('this pokemon knows a first move already');
+        if (typeof(pokemon.move2) === 'undefined') {
+            pokemon.move2 = pokemon.moveslist[pokemon.currLevel];
+            $('#move2').html(pokemon.move2);
+        } else {
+            console.log('this pokemon knows a second move already');
+            if (typeof(pokemon.move3) === 'undefined') {
+                console.log('this pokemon should try to learn' + pokemon.moveslist[pokemon.currLevel]);
+                pokemon.move3 = pokemon.moveslist[pokemon.currLevel];
+                $('#move3').html(pokemon.move3);
+            } else {
+                //console.log('this pokemon knows a third move already');
+                if (typeof(pokemon.move4) === 'undefined') {
+                    pokemon.move4 = pokemon.moveslist[pokemon.currLevel];
+                    $('#move4').html(pokemon.move4);
+                } else {
+                    //console.log('this pokemon knows four moves already');
+                    var newMove1 = pokemon.move2;
+                    var newMove2 = pokemon.move3;
+                    var newMove3 = pokemon.move4;
+                    var newMove4 = pokemon.moveslist[pokemon.currLevel];
+                    pokemon.move1 = newMove1;
+                    pokemon.move2 = newMove2;
+                    pokemon.move3 = newMove3;
+                    pokemon.move4 = newMove4;
+                    $('#move1').text(pokemon.move1);
+                    $('#move2').text(pokemon.move2);
+                    $('#move3').text(pokemon.move3);
+                    $('#move4').text(pokemon.move4);
+                }
+            }
+        }
+    }
+}
+
 function LevelUp(pokemon) {
     if (pokemon.partySlot == 1) {
         if (pokemon.currLevel != 100) {
@@ -467,6 +504,10 @@ function LevelUp(pokemon) {
             $('#currentLevel1').text('Current Level: ' + pokemon.currLevel);
             if (pokemon.currLevel === pokemon.getEvol) {
                 EvolCheck(pokemon);
+            }
+            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
+                console.log(pokemon.moveslist[pokemon.currLevel]);
+                LearnMove(pokemon);
             }
         }
     } else if (pokemon.partySlot == 2) {
@@ -476,6 +517,10 @@ function LevelUp(pokemon) {
             if (pokemon.currLevel === pokemon.getEvol) {
                 EvolCheck(pokemon);
             }
+            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
+                console.log(pokemon.moveslist[pokemon.currLevel]);
+                LearnMove(pokemon);
+            }
         }
     } else if (pokemon.partySlot == 3) {
         if (pokemon.currLevel != 100) {
@@ -483,6 +528,10 @@ function LevelUp(pokemon) {
             $('#currentLevel3').text('Current Level: ' + pokemon.currLevel);
             if (pokemon.currLevel === pokemon.getEvol) {
                 EvolCheck(pokemon);
+            }
+            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
+                console.log(pokemon.moveslist[pokemon.currLevel]);
+                LearnMove(pokemon);
             }
         }
     } else if (pokemon.partySlot == 4) {
@@ -492,6 +541,10 @@ function LevelUp(pokemon) {
             if (pokemon.currLevel === pokemon.getEvol) {
                 EvolCheck(pokemon);
             }
+            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
+                console.log(pokemon.moveslist[pokemon.currLevel]);
+                LearnMove(pokemon);
+            }
         }
     } else if (pokemon.partySlot == 5) {
         if (pokemon.currLevel != 100) {
@@ -500,6 +553,10 @@ function LevelUp(pokemon) {
             if (pokemon.currLevel === pokemon.getEvol) {
                 EvolCheck(pokemon);
             }
+            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
+                console.log(pokemon.moveslist[pokemon.currLevel]);
+                LearnMove(pokemon);
+            }
         }
     } else if (pokemon.partySlot == 6) {
         if (pokemon.currLevel != 100) {
@@ -507,6 +564,10 @@ function LevelUp(pokemon) {
             $('#currentLevel6').text('Current Level: ' + pokemon.currLevel);
             if (pokemon.currLevel === pokemon.getEvol) {
                 EvolCheck(pokemon);
+            }
+            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
+                console.log(pokemon.moveslist[pokemon.currLevel]);
+                LearnMove(pokemon);
             }
         }
     }

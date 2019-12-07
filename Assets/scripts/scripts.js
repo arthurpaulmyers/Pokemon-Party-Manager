@@ -111,10 +111,10 @@ function showPoke1(poke1) {
            li += '<p>Type 2: <spanid="type2"' + poke1.type2 + '</span></p>';
         }
         li += '</div>';
-        li += '<div class="col-lg-4 col-md-4 col-s-12">'
+        li += '<div class="col-lg-2 col-md-2 col-s-6">'
         li += '<p id="currentLevel1">Current Level: ' + poke1.currLevel + '</p>';
         li += '</div>';
-        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<div class="col-lg-2 col-md-2 col-s-6">';
         li += '<p>\
         <a class="ui-btn" onclick="LevelUp(poke1);">Level Up</a>\
         </p>';
@@ -167,10 +167,10 @@ function showPoke2(poke2) {
            li += '<p>Type 2: <spanid="type2"' + poke2.type2 + '</span></p>';
         }
         li += '</div>';
-        li += '<div class="col-lg-4 col-md-4 col-s-12">'
+        li += '<div class="col-lg-2 col-md-2 col-s-6">'
         li += '<p id="currentLevel2">Current Level: ' + poke2.currLevel + '</p>';
         li += '</div>';
-        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<div class="col-lg-2 col-md-2 col-s-6">';
         li += '<p>\
         <a class="ui-btn" onclick="LevelUp(poke2);">Level Up</a>\
         </p>';
@@ -223,10 +223,10 @@ function showPoke3(poke3) {
            li += '<p>Type 2: <spanid="type2"' + poke3.type2 + '</span></p>';
         }
         li += '</div>';
-        li += '<div class="col-lg-4 col-md-4 col-s-12">'
+        li += '<div class="col-lg-2 col-md-2 col-s-6">'
         li += '<p id="currentLevel3">Current Level: ' + poke3.currLevel + '</p>';
         li += '</div>';
-        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<div class="col-lg-2 col-md-2 col-s-6">';
         li += '<p>\
         <a class="ui-btn" onclick="LevelUp(poke3);">Level Up</a>\
         </p>';
@@ -279,10 +279,10 @@ function showPoke4(poke4) {
            li += '<p>Type 2: <spanid="type2"' + poke4.type2 + '</span></p>';
         }
         li += '</div>';
-        li += '<div class="col-lg-4 col-md-4 col-s-12">'
+        li += '<div class="col-lg-2 col-md-2 col-s-6">'
         li += '<p id="currentLevel4">Current Level: ' + poke4.currLevel + '</p>';
         li += '</div>';
-        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<div class="col-lg-2 col-md-2 col-s-6">';
         li += '<p>\
         <a class="ui-btn" onclick="LevelUp(poke4);">Level Up</a>\
         </p>';
@@ -335,10 +335,10 @@ function showPoke5(poke5) {
            li += '<p>Type 2: <spanid="type2"' + poke5.type2 + '</span></p>';
         }
         li += '</div>';
-        li += '<div class="col-lg-4 col-md-4 col-s-12">'
+        li += '<div class="col-lg-2 col-md-2 col-s-6">'
         li += '<p id="currentLevel5">Current Level: ' + poke5.currLevel + '</p>';
         li += '</div>';
-        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<div class="col-lg-2 col-md-2 col-s-6">';
         li += '<p>\
         <a class="ui-btn" onclick="LevelUp(poke5);">Level Up</a>\
         </p>';
@@ -391,10 +391,10 @@ function showPoke6(poke6) {
            li += '<p>Type 2: <spanid="type2"' + poke6.type2 + '</span></p>';
         }
         li += '</div>';
-        li += '<div class="col-lg-4 col-md-4 col-s-12">'
+        li += '<div class="col-lg-2 col-md-2 col-s-6">'
         li += '<p id="currentLevel6">Current Level: ' + poke6.currLevel + '</p>';
         li += '</div>';
-        li += '<div class="col-lg-4 col-md-4 col-s-12">';
+        li += '<div class="col-lg-2 col-md-2 col-s-6">';
         li += '<p>\
         <a class="ui-btn" onclick="LevelUp(poke6);">Level Up</a>\
         </p>';

@@ -1,0 +1,10 @@
+.capitalizeName {
+    text-transform: capitalize;
+}
+img {
+    max-width: 100%;
+}
+.navButton {
+    margin-left: 1%;
+    margin-right: 1%;
+}

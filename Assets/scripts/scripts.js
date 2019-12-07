@@ -1,7 +1,6 @@
 //create the Pokemon class
 class Pokemon {
     constructor(name, type1, type2, currLevel, moveslist, partySlot, getEvol, move1, move2, move3, move4, sprite, newSpecies) {
-        //constructor(name, type1, type2, currLevel, moveslist, slot, getEvol, move1, move2, move3, move4, sprite, newSpecies, verified, movesKnown, newSpecies)
         this.name = name;
         this.type1 = type1;
         this.type2 = type2;
@@ -15,29 +14,18 @@ class Pokemon {
         this.move4 = move4;
         this.sprite = sprite;
         this.newSpecies = newSpecies;
-        //this.verified = verified;
-        //this.movesKnown = movesKnown;
     }
 }
-//
-//
 
-// initialize the Party and the Box
+
+// initialize the Party
 var party = [];
-var box = [];
 var poke1, poke2, poke3, poke4, poke5, poke6;
-//
-//
-//
-
 //make the button functions work
-//
-//
 //add new Pokemon button
 function startNewPokemon() {
     if (party.length >= 6) {
-        //TO DO: Make this appear on the screen.
-        console.log("You already have a full party! Please come back later when Box functionality is updated.")
+        //console.log("You already have a full party! Please come back later when Box functionality is updated.")
         $("#yourCurrentPokemon").html('\
         <br>\
         <div class="container">\
@@ -79,12 +67,10 @@ function startNewPokemon() {
         ');
     }
 }
-//
-//
 //button 1
 function showPoke1(poke1) {
     if (typeof poke1 === 'undefined') {
-        console.log("You haven't added this Pokemon to the team yet!")
+        //console.log("You haven't added this Pokemon to the team yet!")
         $("#yourCurrentPokemon").html('\
         <br>\
         <div class="container">\
@@ -98,7 +84,7 @@ function showPoke1(poke1) {
         </div>\
         ');
     } else if (typeof poke1 === 'object') {
-        console.log(poke1.name);
+        //console.log(poke1.name);
         var li="";
         li += '<div class="row">';
         li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
@@ -116,7 +102,7 @@ function showPoke1(poke1) {
         li += '</div>';
         li += '<div class="col-lg-2 col-md-2 col-s-6">';
         li += '<p>\
-        <a class="ui-btn" onclick="LevelUp(poke1);">Level Up</a>\
+        <button class="btn btn-outline-success my-2 my-sm-0" onclick="LevelUp(poke1);">Level Up</button>\
         </p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
@@ -125,22 +111,14 @@ function showPoke1(poke1) {
         li += '<p>Move 3: <span id="move3">' + poke1.move3 + '</span></p>';
         li += '<p>Move 4: <span id="move4">' + poke1.move4 + '</span></p>';
         li += '</div>';
-        // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
-        // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
-        // li += '<p>' + poke1.moveslist + '</p>';
         li += '</div>';
-
-        //$("#pokeDetails").empty();
-
         $("#yourCurrentPokemon").html(li);
     };
 }
-//
-//
 //button 2
 function showPoke2(poke2) {
     if (typeof poke2 === 'undefined') {
-        console.log("You haven't added this Pokemon to the team yet!")
+        //console.log("You haven't added this Pokemon to the team yet!")
         $("#yourCurrentPokemon").html('\
         <br>\
         <div class="container">\
@@ -154,7 +132,7 @@ function showPoke2(poke2) {
         </div>\
         ');
     } else if (typeof poke2 === 'object') {
-        console.log(poke2.name);
+        //console.log(poke2.name);
         var li="";
         li += '<div class="row">';
         li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
@@ -172,7 +150,7 @@ function showPoke2(poke2) {
         li += '</div>';
         li += '<div class="col-lg-2 col-md-2 col-s-6">';
         li += '<p>\
-        <a class="ui-btn" onclick="LevelUp(poke2);">Level Up</a>\
+        <button class="btn btn-outline-success my-2 my-sm-0" onclick="LevelUp(poke2);">Level Up</button>\
         </p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
@@ -181,22 +159,14 @@ function showPoke2(poke2) {
         li += '<p>Move 3: <span id="move3">' + poke2.move3 + '</span></p>';
         li += '<p>Move 4: <span id="move4">' + poke2.move4 + '</span></p>';
         li += '</div>';
-        // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
-        // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
-        // li += '<p>' + poke1.moveslist + '</p>';
         li += '</div>';
-
-        //$("#pokeDetails").empty();
-
         $("#yourCurrentPokemon").html(li);
     };
 }
-//
-//
 //button 3
 function showPoke3(poke3) {
     if (typeof poke3 === 'undefined') {
-        console.log("You haven't added this Pokemon to the team yet!")
+        //console.log("You haven't added this Pokemon to the team yet!")
         $("#yourCurrentPokemon").html('\
         <br>\
         <div class="container">\
@@ -210,7 +180,7 @@ function showPoke3(poke3) {
         </div>\
         ');
     } else if (typeof poke3 === 'object') {
-        console.log(poke3.name);
+        //console.log(poke3.name);
         var li="";
         li += '<div class="row">';
         li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
@@ -228,7 +198,7 @@ function showPoke3(poke3) {
         li += '</div>';
         li += '<div class="col-lg-2 col-md-2 col-s-6">';
         li += '<p>\
-        <a class="ui-btn" onclick="LevelUp(poke3);">Level Up</a>\
+        <button class="btn btn-outline-success my-2 my-sm-0" onclick="LevelUp(poke3);">Level Up</button>\
         </p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
@@ -237,22 +207,14 @@ function showPoke3(poke3) {
         li += '<p>Move 3: <span id="move3">' + poke3.move3 + '</span></p>';
         li += '<p>Move 4: <span id="move4">' + poke3.move4 + '</span></p>';
         li += '</div>';
-        // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
-        // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
-        // li += '<p>' + poke1.moveslist + '</p>';
         li += '</div>';
-
-        //$("#pokeDetails").empty();
-
         $("#yourCurrentPokemon").html(li);
     };
 }
-//
-//
 //button 4
 function showPoke4(poke4) {
     if (typeof poke4 === 'undefined') {
-        console.log("You haven't added this Pokemon to the team yet!")
+        //console.log("You haven't added this Pokemon to the team yet!")
         $("#yourCurrentPokemon").html('\
         <br>\
         <div class="container">\
@@ -266,7 +228,7 @@ function showPoke4(poke4) {
         </div>\
         ');
     } else if (typeof poke2 === 'object') {
-        console.log(poke2.name);
+        //console.log(poke2.name);
         var li="";
         li += '<div class="row">';
         li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
@@ -284,7 +246,7 @@ function showPoke4(poke4) {
         li += '</div>';
         li += '<div class="col-lg-2 col-md-2 col-s-6">';
         li += '<p>\
-        <a class="ui-btn" onclick="LevelUp(poke4);">Level Up</a>\
+        <button class="btn btn-outline-success my-2 my-sm-0" onclick="LevelUp(poke4);">Level Up</button>\
         </p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
@@ -293,22 +255,14 @@ function showPoke4(poke4) {
         li += '<p>Move 3: <span id="move3">' + poke4.move3 + '</span></p>';
         li += '<p>Move 4: <span id="move4">' + poke4.move4 + '</span></p>';
         li += '</div>';
-        // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
-        // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
-        // li += '<p>' + poke1.moveslist + '</p>';
         li += '</div>';
-
-        //$("#pokeDetails").empty();
-
         $("#yourCurrentPokemon").html(li);
     };
 }
-//
-//
 //button 5
 function showPoke5(poke5) {
     if (typeof poke5 === 'undefined') {
-        console.log("You haven't added this Pokemon to the team yet!")
+        //console.log("You haven't added this Pokemon to the team yet!")
         $("#yourCurrentPokemon").html('\
         <br>\
         <div class="container">\
@@ -322,7 +276,7 @@ function showPoke5(poke5) {
         </div>\
         ');
     } else if (typeof poke2 === 'object') {
-        console.log(poke5.name);
+        //console.log(poke5.name);
         var li="";
         li += '<div class="row">';
         li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
@@ -340,7 +294,7 @@ function showPoke5(poke5) {
         li += '</div>';
         li += '<div class="col-lg-2 col-md-2 col-s-6">';
         li += '<p>\
-        <a class="ui-btn" onclick="LevelUp(poke5);">Level Up</a>\
+        <button class="btn btn-outline-success my-2 my-sm-0" onclick="LevelUp(poke5);">Level Up</button>\
         </p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
@@ -349,22 +303,14 @@ function showPoke5(poke5) {
         li += '<p>Move 3: <span id="move3">' + poke5.move3 + '</span></p>';
         li += '<p>Move 4: <span id="move4">' + poke5.move4 + '</span></p>';
         li += '</div>';
-        // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
-        // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
-        // li += '<p>' + poke1.moveslist + '</p>';
         li += '</div>';
-
-        //$("#pokeDetails").empty();
-
         $("#yourCurrentPokemon").html(li);
     };
 }
-//
-//
 //button 6
 function showPoke6(poke6) {
     if (typeof poke6 === 'undefined') {
-        console.log("You haven't added this Pokemon to the team yet!")
+        //console.log("You haven't added this Pokemon to the team yet!")
         $("#yourCurrentPokemon").html('\
         <br>\
         <div class="container">\
@@ -378,7 +324,7 @@ function showPoke6(poke6) {
         </div>\
         ');
     } else if (typeof poke6 === 'object') {
-        console.log(poke6.name);
+        //console.log(poke6.name);
         var li="";
         li += '<div class="row">';
         li += '<div class="col-lg-8 col-md-8 col-s-12" id="pokemonImage">';
@@ -396,7 +342,7 @@ function showPoke6(poke6) {
         li += '</div>';
         li += '<div class="col-lg-2 col-md-2 col-s-6">';
         li += '<p>\
-        <a class="ui-btn" onclick="LevelUp(poke6);">Level Up</a>\
+        <button class="btn btn-outline-success my-2 my-sm-0" onclick="LevelUp(poke6);">Level Up</button>\
         </p>';
         li += '</div>';
         li += '<div class="col-lg-4 col-md-4 col-s-12">'
@@ -405,23 +351,11 @@ function showPoke6(poke6) {
         li += '<p>Move 3: <span id="move3">' + poke6.move3 + '</span></p>';
         li += '<p>Move 4: <span id="move4">' + poke6.move4 + '</span></p>';
         li += '</div>';
-        // li += '<p id="evolutionsentence">Evolves at level ' + poke1.getEvol + ' into ' + poke1.newSpecies + '</p>';
-        // li += '<p>This Pokemon is Party Member: ' + poke1.partySlot + '</p>';
-        // li += '<p>' + poke1.moveslist + '</p>';
         li += '</div>';
-
-        //$("#pokeDetails").empty();
-
         $("#yourCurrentPokemon").html(li);
     };
 }
-//
-//
-//
-//
-//
-//
-//
+
 // change the values of the species list based upon the location value selected
 function locSubmit() {
     var poke = document.getElementById("speciesList");
@@ -460,239 +394,7 @@ function locSubmit() {
     }
 }
 
-function LearnMove(pokemon) {
-    if (typeof(pokemon.move1) !== 'undefined') {
-        console.log('this pokemon knows a first move already');
-        if (typeof(pokemon.move2) === 'undefined') {
-            pokemon.move2 = pokemon.moveslist[pokemon.currLevel];
-            $('#move2').html(pokemon.move2);
-        } else {
-            console.log('this pokemon knows a second move already');
-            if (typeof(pokemon.move3) === 'undefined') {
-                console.log('this pokemon should try to learn' + pokemon.moveslist[pokemon.currLevel]);
-                pokemon.move3 = pokemon.moveslist[pokemon.currLevel];
-                $('#move3').html(pokemon.move3);
-            } else {
-                //console.log('this pokemon knows a third move already');
-                if (typeof(pokemon.move4) === 'undefined') {
-                    pokemon.move4 = pokemon.moveslist[pokemon.currLevel];
-                    $('#move4').html(pokemon.move4);
-                } else {
-                    //console.log('this pokemon knows four moves already');
-                    var newMove1 = pokemon.move2;
-                    var newMove2 = pokemon.move3;
-                    var newMove3 = pokemon.move4;
-                    var newMove4 = pokemon.moveslist[pokemon.currLevel];
-                    pokemon.move1 = newMove1;
-                    pokemon.move2 = newMove2;
-                    pokemon.move3 = newMove3;
-                    pokemon.move4 = newMove4;
-                    $('#move1').text(pokemon.move1);
-                    $('#move2').text(pokemon.move2);
-                    $('#move3').text(pokemon.move3);
-                    $('#move4').text(pokemon.move4);
-                }
-            }
-        }
-    }
-}
-
-function LevelUp(pokemon) {
-    if (pokemon.partySlot == 1) {
-        if (pokemon.currLevel != 100) {
-            pokemon.currLevel+= 1;
-            $('#currentLevel1').text('Current Level: ' + pokemon.currLevel);
-            if (pokemon.currLevel === pokemon.getEvol) {
-                EvolCheck(pokemon);
-            }
-            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
-                console.log(pokemon.moveslist[pokemon.currLevel]);
-                LearnMove(pokemon);
-            }
-        }
-    } else if (pokemon.partySlot == 2) {
-        if (pokemon.currLevel != 100) {
-            pokemon.currLevel+= 1;
-            $('#currentLevel2').text('Current Level: ' + pokemon.currLevel);
-            if (pokemon.currLevel === pokemon.getEvol) {
-                EvolCheck(pokemon);
-            }
-            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
-                console.log(pokemon.moveslist[pokemon.currLevel]);
-                LearnMove(pokemon);
-            }
-        }
-    } else if (pokemon.partySlot == 3) {
-        if (pokemon.currLevel != 100) {
-            pokemon.currLevel+= 1;
-            $('#currentLevel3').text('Current Level: ' + pokemon.currLevel);
-            if (pokemon.currLevel === pokemon.getEvol) {
-                EvolCheck(pokemon);
-            }
-            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
-                console.log(pokemon.moveslist[pokemon.currLevel]);
-                LearnMove(pokemon);
-            }
-        }
-    } else if (pokemon.partySlot == 4) {
-        if (pokemon.currLevel != 100) {
-            pokemon.currLevel+= 1;
-            $('#currentLevel4').text('Current Level: ' + pokemon.currLevel);
-            if (pokemon.currLevel === pokemon.getEvol) {
-                EvolCheck(pokemon);
-            }
-            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
-                console.log(pokemon.moveslist[pokemon.currLevel]);
-                LearnMove(pokemon);
-            }
-        }
-    } else if (pokemon.partySlot == 5) {
-        if (pokemon.currLevel != 100) {
-            pokemon.currLevel+= 1;
-            $('#currentLevel5').text('Current Level: ' + pokemon.currLevel);
-            if (pokemon.currLevel === pokemon.getEvol) {
-                EvolCheck(pokemon);
-            }
-            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
-                console.log(pokemon.moveslist[pokemon.currLevel]);
-                LearnMove(pokemon);
-            }
-        }
-    } else if (pokemon.partySlot == 6) {
-        if (pokemon.currLevel != 100) {
-            pokemon.currLevel+= 1;
-            $('#currentLevel6').text('Current Level: ' + pokemon.currLevel);
-            if (pokemon.currLevel === pokemon.getEvol) {
-                EvolCheck(pokemon);
-            }
-            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
-                console.log(pokemon.moveslist[pokemon.currLevel]);
-                LearnMove(pokemon);
-            }
-        }
-    }
-        // else if (verified != true) {
-        //     VerificationCheck();
-        // }
-        // for (i = 0; i < moveslist.length; i++) {
-        //     if (currLevel === moveslist[i]) {
-        //         LearnMove();
-        //     }
-        // }
-}
-
-function EvolCheck(pokemon) {
-    console.log('checking evolution');
-    var newPokeURL = "https://cors-anywhere.herokuapp.com/http://pokeapi.co/api/v1/pokemon/" + pokemon.newSpecies;
-    $.getJSON(newPokeURL, function(data) {
-        var newPokeType1 = data.types[0].type.name;
-        if (data.types.length == 2) {
-            var newPokeType2 = data.types[1].type.name;
-        }
-        else var newpokeType2 = null;
-
-        if (pokemon.newSpecies === "bayleef") {
-            newGetEvol = 32;
-            newNewSpecies = 'meganium';
-        } else if (pokemon.newSpecies === "quilava") {
-            newGetEvol = 36;
-            newNewSpecies = 'typhlosion';
-        } else if (pokemon.newSpecies === "croconaw") {
-            newGetEvol = 30;
-            newNewSpecies = 'feraligatr';
-        } else if (pokemon.newSpecies === "pidgeotto") {
-            newGetEvol = 36;
-            newNewSpecies = 'pidgeot';
-        } else if (pokemon.newSpecies === "meganium") {
-            newGetEvol = 101;
-            newNewSpecies = 'none';
-        } else if (pokemon.newSpecies === "typhlosion") {
-            newGetEvol = 101;
-            newNewSpecies = 'none';
-        } else if (pokemon.newSpecies === "feraligatr") {
-            newGetEvol = 101;
-            newNewSpecies = 'none';
-        } else if (pokemon.newSpecies === "pidgeot") {
-            newGetEvol = 101;
-            newNewSpecies = 'none';
-        } else if (pokemon.newSpecies === "raticate") {
-            newGetEvol = 101;
-            newNewSpecies = 'none';
-        } else if (pokemon.newSpecies === "noctowl") {
-            newGetEvol = 101;
-            newNewSpecies = 'none';
-        } else if (pokemon.newSpecies === "furret") {
-            newGetEvol = 101;
-            newNewSpecies = 'none';
-        }
-        var newMovesList = {};
-        var newLengthPoke = data.moves.length;
-        // console.log('Number of moves: ', lengthPoke)
-        // console.log("Number: ", pokeID);
-        // console.log("Name: ", pokeName);
-        // console.log("Type 1: ", pokeType1);
-        // console.log("Type 2: ", pokeType2);
-        // console.log("Image URI: ", imageURI);
-        // console.log(data.moves[0].version_group_details[0].version_group.name)
-        var i;
-        for (i = 0; i < newLengthPoke; i++) {
-            //console.log(data.moves[i]);
-            //console.log(data.moves[i].version_group_details[0]);
-            //console.log(data.moves[i].version_group_details[0].version_group.name);
-            var numOfGamesWithMove = data.moves[i].version_group_details.length;
-            //console.log("number of games", data.moves[i], "is available in: ", data.moves[i].version_group_details.length);
-            var m;
-            for (m = 0; m < numOfGamesWithMove; m++) {
-                if (data.moves[i].version_group_details[m].version_group.name === 'heartgold-soulsilver') {
-                    if (data.moves[i].version_group_details[m].level_learned_at > 0) {
-                        console.log(data.moves[i].move.name);
-                        var moveName = data.moves[i].move.name;
-                        console.log(data.moves[i].version_group_details[m].level_learned_at);
-                        var moveLevel = data.moves[i].version_group_details[m].level_learned_at;
-                        newMovesList[moveLevel] = moveName;
-                    }
-                }
-            }
-        }
-        pokemon.moveslist = newMovesList;
-        pokemon.type1 = newPokeType1;
-        if (newPokeType2 != null) {
-            pokemon.type2 = newPokeType2;
-        }
-        pokemon.getEvol = newGetEvol;
-        pokemon.name = pokemon.newSpecies;
-        $('#name').text(pokemon.name);
-        if (pokemon.partySlot == 1) {
-            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke1.name + '.png">');
-            $("#poke1button").text(pokemon.name);
-        } else if (pokemon.partySlot == 2) {
-            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke2.name + '.png">');
-            $("#poke2button").text(pokemon.name);
-        } else if (pokemon.partySlot == 3) {
-            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke3.name + '.png">');
-            $("#poke3button").text(pokemon.name);
-        } else if (pokemon.partySlot == 4) {
-            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke4.name + '.png">');
-            $("#poke4button").text(pokemon.name);
-        } else if (pokemon.partySlot == 5) {
-            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke5.name + '.png">');
-            $("#poke5button").text(pokemon.name);
-        } else if (pokemon.partySlot == 6) {
-            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke6.name + '.png">');
-            $("#poke6button").text(pokemon.name);
-        }
-        pokemon.newSpecies = newNewSpecies;
-        $('#type1').html(pokemon.type1);
-        if (pokemon.type2 != null) {
-            $('#type2').html(pokemon.type2);
-        }
-    });
-    console.log(pokemon);
-    //if (pokemon.partySlot === '1') {
-    //}
-}
-
-
+//Actually initialize the Pokemon and add it to your team
 function pokeSubmit() {
     if (party.length < 6) {
     var loc = document.getElementById("locList");
@@ -703,10 +405,10 @@ function pokeSubmit() {
     //pokeAPI does not have an Access-Control-Allow-Origin value set
     //so https://cors-anywhere.herokuapp.com/ is used to allow use of the api
 
-//Get the data and push it to the console
+    //Get the data and push it to the console
     $.getJSON(pokeURL, function(data) {
         //console.log(data);
-        console.log(JSON.stringify(data, null, " "));
+        //console.log(JSON.stringify(data, null, " "));
         var pokeID = data.id;
         var pokeName = data.name;
 
@@ -745,23 +447,11 @@ function pokeSubmit() {
             newSpecies = 'furret';
         }
 
-
         //determine level upon adding
         if (locParam === "Starter Pokemon") {
             currLevel = 5;
         } else if (locParam === "Route 29") {
-            if (pokeName === "rattata") {
-                currLevel = 4;
-            }
-            else if (pokeName === "sentret") {
-                currLevel = 4;
-            }
-            else if (pokeName === "pidgey") {
-                currLevel = 4;
-            }
-            else if (pokeName === "hoothoot") {
-                currLevel = 4;
-            }
+            currLevel = 2;
         }
         var imageURI = data.sprites.front_default;
         var lengthPoke = data.moves.length;
@@ -783,12 +473,12 @@ function pokeSubmit() {
             for (m = 0; m < numOfGamesWithMove; m++) {
                 if (data.moves[i].version_group_details[m].version_group.name === 'heartgold-soulsilver') {
                     if (data.moves[i].version_group_details[m].level_learned_at > 0) {
-                        console.log(data.moves[i].move.name);
+                        //console.log(data.moves[i].move.name);
                         var moveName = data.moves[i].move.name;
-                        console.log(data.moves[i].version_group_details[m].level_learned_at);
+                        //console.log(data.moves[i].version_group_details[m].level_learned_at);
                         if (!((data.moves[i].version_group_details[m].level_learned_at) in moveslist)) {
                             var moveLevel = data.moves[i].version_group_details[m].level_learned_at;
-                            console.log('A move with the level' + moveLevel + ' has not been in the moveset');
+                            //console.log('A move with the level' + moveLevel + ' has not been in the moveset');
                         } else {
                             var moveLevel = ((data.moves[i].version_group_details[m].level_learned_at) + 1);
                         }
@@ -888,43 +578,7 @@ function pokeSubmit() {
             $("#outputrow").html(poke6html);
         }
 
-        else {
-            box.push(pokemon);
-        }
-
-        console.log(party);
-        console.log(box);
-
-        // $("#yourCurrentPokemon").empty;
-        //$("#yourPokemon").html('<p>hello!</p>');
-
-        //making it appear on the screen
-        // var li="";
-        // li += '<img src="' + pokemon.sprite + '">';
-        // li += '<h1>#' + pokeID + ' ' + pokemon.name + '</h1>';
-        // li += '<p>Type 1: ' + pokemon.type1 + '</p>';
-        
-        // if (pokeType2 != null) {
-        //    li += '<p>Type 2: ' + pokemon.type2 + '</p>';
-        // }
-        // li += '<p id="currentLevel">Current Level: ' + pokemon.currLevel + '</p>';
-        // li += '<p id="move1">Move 1: ' + pokemon.move1 + '</p>';
-        // li += '<p id="move2">Move 2: ' + pokemon.move2 + '</p>';
-        // li += '<p id="move3">Move 3: ' + pokemon.move3 + '</p>';
-        // li += '<p id="move4">Move 4: ' + pokemon.move4 + '</p>';
-        // li += '<p id="evolutionsentence">Evolves at level ' + pokemon.getEvol + ' into ' + pokemon.newSpecies + '</p>';
-        // li += '<p>This Pokemon is Party Member: ' + pokemon.partySlot + '</p>';
-        // li += '<p>' + moveslist + '</p>';
-        // li += '<p>\
-        // <a class="ui-btn" onclick="LevelUp();">Level Up</a>\
-        // </p>';
-
-        // //$("#pokeDetails").empty();
-
-        // $("#yourCurrentPokemon").append(li).promise().done(function(){
-        // //    $(this).listview("refresh");
-        // //});
-        // });
+        //console.log(party);
     });
 } else {
         $("#yourCurrentPokemon").html('\
@@ -939,5 +593,218 @@ function pokeSubmit() {
         </div>\
         </div>\
         ');
+    }
+}
+
+//Allow the Pokemon to level up to evolve and learn new moves
+function LevelUp(pokemon) {
+    if (pokemon.partySlot == 1) {
+        if (pokemon.currLevel != 100) {
+            pokemon.currLevel+= 1;
+            $('#currentLevel1').text('Current Level: ' + pokemon.currLevel);
+            if (pokemon.currLevel === pokemon.getEvol) {
+                EvolCheck(pokemon);
+            }
+            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
+                //console.log(pokemon.moveslist[pokemon.currLevel]);
+                LearnMove(pokemon);
+            }
+        }
+    } else if (pokemon.partySlot == 2) {
+        if (pokemon.currLevel != 100) {
+            pokemon.currLevel+= 1;
+            $('#currentLevel2').text('Current Level: ' + pokemon.currLevel);
+            if (pokemon.currLevel === pokemon.getEvol) {
+                EvolCheck(pokemon);
+            }
+            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
+                //console.log(pokemon.moveslist[pokemon.currLevel]);
+                LearnMove(pokemon);
+            }
+        }
+    } else if (pokemon.partySlot == 3) {
+        if (pokemon.currLevel != 100) {
+            pokemon.currLevel+= 1;
+            $('#currentLevel3').text('Current Level: ' + pokemon.currLevel);
+            if (pokemon.currLevel === pokemon.getEvol) {
+                EvolCheck(pokemon);
+            }
+            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
+                //console.log(pokemon.moveslist[pokemon.currLevel]);
+                LearnMove(pokemon);
+            }
+        }
+    } else if (pokemon.partySlot == 4) {
+        if (pokemon.currLevel != 100) {
+            pokemon.currLevel+= 1;
+            $('#currentLevel4').text('Current Level: ' + pokemon.currLevel);
+            if (pokemon.currLevel === pokemon.getEvol) {
+                EvolCheck(pokemon);
+            }
+            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
+                //console.log(pokemon.moveslist[pokemon.currLevel]);
+                LearnMove(pokemon);
+            }
+        }
+    } else if (pokemon.partySlot == 5) {
+        if (pokemon.currLevel != 100) {
+            pokemon.currLevel+= 1;
+            $('#currentLevel5').text('Current Level: ' + pokemon.currLevel);
+            if (pokemon.currLevel === pokemon.getEvol) {
+                EvolCheck(pokemon);
+            }
+            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
+                //console.log(pokemon.moveslist[pokemon.currLevel]);
+                LearnMove(pokemon);
+            }
+        }
+    } else if (pokemon.partySlot == 6) {
+        if (pokemon.currLevel != 100) {
+            pokemon.currLevel+= 1;
+            $('#currentLevel6').text('Current Level: ' + pokemon.currLevel);
+            if (pokemon.currLevel === pokemon.getEvol) {
+                EvolCheck(pokemon);
+            }
+            if (pokemon.moveslist.hasOwnProperty(pokemon.currLevel)) {
+                //console.log(pokemon.moveslist[pokemon.currLevel]);
+                LearnMove(pokemon);
+            }
+        }
+    }
+}
+
+//Allow the Pokemon to evolve and get the accurate data from the API
+function EvolCheck(pokemon) {
+    //console.log('checking evolution');
+    var newPokeURL = "https://cors-anywhere.herokuapp.com/http://pokeapi.co/api/v1/pokemon/" + pokemon.newSpecies;
+    $.getJSON(newPokeURL, function(data) {
+        var newPokeType1 = data.types[0].type.name;
+        if (data.types.length == 2) {
+            var newPokeType2 = data.types[1].type.name;
+        }
+        else var newpokeType2 = null;
+
+        if (pokemon.newSpecies === "bayleef") {
+            newGetEvol = 32;
+            newNewSpecies = 'meganium';
+        } else if (pokemon.newSpecies === "quilava") {
+            newGetEvol = 36;
+            newNewSpecies = 'typhlosion';
+        } else if (pokemon.newSpecies === "croconaw") {
+            newGetEvol = 30;
+            newNewSpecies = 'feraligatr';
+        } else if (pokemon.newSpecies === "pidgeotto") {
+            newGetEvol = 36;
+            newNewSpecies = 'pidgeot';
+        } else if (pokemon.newSpecies === "meganium") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        } else if (pokemon.newSpecies === "typhlosion") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        } else if (pokemon.newSpecies === "feraligatr") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        } else if (pokemon.newSpecies === "pidgeot") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        } else if (pokemon.newSpecies === "raticate") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        } else if (pokemon.newSpecies === "noctowl") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        } else if (pokemon.newSpecies === "furret") {
+            newGetEvol = 101;
+            newNewSpecies = 'none';
+        }
+        var newMovesList = {};
+        var newLengthPoke = data.moves.length;
+        var i;
+        for (i = 0; i < newLengthPoke; i++) {
+            var numOfGamesWithMove = data.moves[i].version_group_details.length;
+            var m;
+            for (m = 0; m < numOfGamesWithMove; m++) {
+                if (data.moves[i].version_group_details[m].version_group.name === 'heartgold-soulsilver') {
+                    if (data.moves[i].version_group_details[m].level_learned_at > 0) {
+                        //console.log(data.moves[i].move.name);
+                        var moveName = data.moves[i].move.name;
+                        //console.log(data.moves[i].version_group_details[m].level_learned_at);
+                        var moveLevel = data.moves[i].version_group_details[m].level_learned_at;
+                        newMovesList[moveLevel] = moveName;
+                    }
+                }
+            }
+        }
+        pokemon.moveslist = newMovesList;
+        pokemon.type1 = newPokeType1;
+        if (newPokeType2 != null) {
+            pokemon.type2 = newPokeType2;
+        }
+        pokemon.getEvol = newGetEvol;
+        pokemon.name = pokemon.newSpecies;
+        $('#name').text(pokemon.name);
+        if (pokemon.partySlot == 1) {
+            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke1.name + '.png">');
+            $("#poke1button").text(pokemon.name);
+        } else if (pokemon.partySlot == 2) {
+            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke2.name + '.png">');
+            $("#poke2button").text(pokemon.name);
+        } else if (pokemon.partySlot == 3) {
+            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke3.name + '.png">');
+            $("#poke3button").text(pokemon.name);
+        } else if (pokemon.partySlot == 4) {
+            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke4.name + '.png">');
+            $("#poke4button").text(pokemon.name);
+        } else if (pokemon.partySlot == 5) {
+            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke5.name + '.png">');
+            $("#poke5button").text(pokemon.name);
+        } else if (pokemon.partySlot == 6) {
+            $('#pokemonImage').html('<img src="assets/img/pokeIMG/' + poke6.name + '.png">');
+            $("#poke6button").text(pokemon.name);
+        }
+        pokemon.newSpecies = newNewSpecies;
+        $('#type1').html(pokemon.type1);
+        if (pokemon.type2 != null) {
+            $('#type2').html(pokemon.type2);
+        }
+    });
+    //console.log(pokemon);
+}
+
+function LearnMove(pokemon) {
+    if (typeof(pokemon.move1) !== 'undefined') {
+        //console.log('this pokemon knows a first move already');
+        if (typeof(pokemon.move2) === 'undefined') {
+            pokemon.move2 = pokemon.moveslist[pokemon.currLevel];
+            $('#move2').html(pokemon.move2);
+        } else {
+            //console.log('this pokemon knows a second move already');
+            if (typeof(pokemon.move3) === 'undefined') {
+                //console.log('this pokemon should try to learn' + pokemon.moveslist[pokemon.currLevel]);
+                pokemon.move3 = pokemon.moveslist[pokemon.currLevel];
+                $('#move3').html(pokemon.move3);
+            } else {
+                //console.log('this pokemon knows a third move already');
+                if (typeof(pokemon.move4) === 'undefined') {
+                    pokemon.move4 = pokemon.moveslist[pokemon.currLevel];
+                    $('#move4').html(pokemon.move4);
+                } else {
+                    //console.log('this pokemon knows four moves already');
+                    var newMove1 = pokemon.move2;
+                    var newMove2 = pokemon.move3;
+                    var newMove3 = pokemon.move4;
+                    var newMove4 = pokemon.moveslist[pokemon.currLevel];
+                    pokemon.move1 = newMove1;
+                    pokemon.move2 = newMove2;
+                    pokemon.move3 = newMove3;
+                    pokemon.move4 = newMove4;
+                    $('#move1').text(pokemon.move1);
+                    $('#move2').text(pokemon.move2);
+                    $('#move3').text(pokemon.move3);
+                    $('#move4').text(pokemon.move4);
+                }
+            }
+        }
     }
 }

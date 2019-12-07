@@ -42,9 +42,24 @@ function startNewPokemon() {
     if (party.length >= 6) {
         //TO DO: Make this appear on the screen.
         console.log("You already have a full party! Please come back later when Box functionality is updated.")
+        $("#yourCurrentPokemon").html('\
+        <br>\
+        <div class="container">\
+        <div class="row">\
+        <div class="col">\
+        <p>\
+        You already have a full party! Please come back later when Box functionality is added.\
+        </p>\
+        </div>\
+        </div>\
+        </div>\
+        ');
     } else {
         $("#yourCurrentPokemon").html('\
         <br>\
+        <div class="container">\
+        <div class="row">\
+        <div class="col">\
         <form id="chooseLocation" action="#" method="post">\
                 <div>\
                     <label for="locList">Where did you find the Pokemon?</label>\
@@ -58,6 +73,13 @@ function startNewPokemon() {
                     <a class="ui-btn" onclick="locSubmit();">Choose Location</a>\
                 </div>\
         </form>    \
+        </div>\
+        </div>\
+        <div class="row" id="speciesrow">\
+        </div>\
+        <div class="row" id="outputrow">\
+        </div>\
+        </div>\
         ');
     }
 }
@@ -71,7 +93,7 @@ function showPoke1(poke1) {
         console.log(poke1.name);
         var li="";
         li += '<img src="' + poke1.sprite + '">';
-        li += '<h1>' + poke1.name + '</h1>';
+        li += '<h1 class="capitalizeName">' + poke1.name + '</h1>';
         li += '<p>Type 1: ' + poke1.type1 + '</p>';
         
         if (poke1.type2 != null) {
@@ -271,7 +293,9 @@ function locSubmit() {
     var poke = document.getElementById("speciesList");
     var loc = document.getElementById("locList");
     var locParam = loc.options[loc.selectedIndex].text;
-    $("#yourCurrentPokemon").append('\
+    $("#speciesrow").html('\
+    <br>\
+    <div class="col">\
     <form id="chooseSpecies" action="#" method="post">\
                 <div>\
                     <label for="speciesList">What Pokemon did you find?</label>\
@@ -282,6 +306,7 @@ function locSubmit() {
                 <br>\
                 <div>\
                     <a class="ui-btn" onclick="pokeSubmit();">Choose Pokemon</a>\
+                </div>\
                 </div>\
     ');
     if (locParam === "Starter Pokemon") {
@@ -322,6 +347,7 @@ function LevelUp(pokemon) {
 
 
 function pokeSubmit() {
+    if (party.length < 6) {
     var loc = document.getElementById("locList");
     var locParam = loc.options[loc.selectedIndex].text;
     var poke = document.getElementById("speciesList");
@@ -463,63 +489,69 @@ function pokeSubmit() {
             poke1 = pokemon;
             $("#poke1button").text(pokemon.name);
             var poke1html = "";
-            poke1html = "<div>";
+            poke1html = "<br>";
+            poke1html = poke1html + "<div class='col'>";
             poke1html = poke1html + "<p>You added ";
             poke1html = poke1html + pokemon.name;
             poke1html = poke1html + " to your party! Select the first Pokemon link in the navigation to see details";
             poke1html = poke1html + "</p></div>";
-            $("#yourCurrentPokemon").append(poke1html);
+            $("#outputrow").html(poke1html);
 
         } else if (party.length == 2) {
             poke2 = pokemon;
             $("#poke2button").text(pokemon.name);
             var poke2html = "";
-            poke2html = "<div>";
+            poke2html = "<br>";
+            poke2html = poke2html + "<div class='col'>";
             poke2html = poke2html + "<p>You added ";
             poke2html = poke2html + pokemon.name;
             poke2html = poke2html + " to your party! Select the second Pokemon link in the navigation to see details";
-            poke2html = poke2html + "</p></div>";
-            $("#yourCurrentPokemon").append(poke2html);
+            poke2html = poke2html + "</p></div></div>";
+            $("#outputrow").html(poke2html);
         } else if (party.length == 3) {
             poke3 = pokemon;
             $("#poke3button").text(pokemon.name);
             var poke3html = "";
-            poke3html = "<div>";
+            poke3html = "<br>";
+            poke3html = poke3html + "<div class='col'>";
             poke3html = poke3html + "<p>You added ";
             poke3html = poke3html + pokemon.name;
             poke3html = poke3html + " to your party! Select the third Pokemon link in the navigation to see details";
-            poke3html = poke3html + "</p></div>";
-            $("#yourCurrentPokemon").append(poke3html);
+            poke3html = poke3html + "</p></div></div>";
+            $("#outputrow").html(poke3html);
         } else if (party.length == 4) {
             poke4 = pokemon;
             $("#poke4button").text(pokemon.name);
             var poke4html = "";
-            poke4html = "<div>";
+            poke4html = "<br>";
+            poke4html = poke4html + "<div class='col'>";
             poke4html = poke4html + "<p>You added ";
             poke4html = poke4html + pokemon.name;
             poke4html = poke4html + " to your party! Select the fourth Pokemon link in the navigation to see details";
-            poke4html = poke4html + "</p></div>";
-            $("#yourCurrentPokemon").append(poke4html);
+            poke4html = poke4html + "</p></div></div>";
+            $("#outputrow").html(poke4html);
         } else if (party.length == 5) {
             poke5 = pokemon;
             $("#poke5button").text(pokemon.name);
             var poke5html = "";
-            poke5html = "<div>";
+            poke5html = "<br>";
+            poke5html = poke5html + "<div class='col'>";
             poke5html = poke5html + "<p>You added ";
             poke5html = poke5html + pokemon.name;
             poke5html = poke5html + " to your party! Select the fifth Pokemon link in the navigation to see details";
-            poke5html = poke5html + "</p></div>";
-            $("#yourCurrentPokemon").append(poke5html);
+            poke5html = poke5html + "</p></div></div>";
+            $("#outputrow").html(poke5html);
         } else if (party.length == 6) {
             poke6 = pokemon;
             $("#poke6button").text(pokemon.name);
             var poke2html = "";
-            poke6html = "<div>";
+            poke6html = "<br>";
+            poke6hml = poke6html + "<div class='col'>";
             poke6html = poke6html + "<p>You added ";
             poke6html = poke6html + pokemon.name;
             poke6html = poke6html + " to your party! Select the sixth Pokemon link in the navigation to see details";
-            poke6html = poke6html + "</p></div>";
-            $("#yourCurrentPokemon").append(poke6html);
+            poke6html = poke6html + "</p></div></div>";
+            $("#outputrow").html(poke6html);
         }
 
         else {
@@ -560,4 +592,18 @@ function pokeSubmit() {
         // //});
         // });
     });
+} else {
+        $("#yourCurrentPokemon").html('\
+        <br>\
+        <div class="container">\
+        <div class="row">\
+        <div class="col">\
+        <p>\
+        You already have a full party! Please come back later when Box functionality is added.\
+        </p>\
+        </div>\
+        </div>\
+        </div>\
+        ');
+    }
 }

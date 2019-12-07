@@ -1,0 +1,6 @@
+.capitalizeName {
+    text-transform: capitalize;
+}
+.container {
+    margin: 15px;
+}

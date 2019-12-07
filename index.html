@@ -1,28 +1,34 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="scripts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="assets/scripts/scripts.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" hret="assets/styles/styles.css">
     <title>Pokemon Party Manager</title>
 </head>
 
 <!-- app search page -->
 <div data-role="page" id="pokeSearch-page">
-    <div data-role="header" data-theme="b">
-        <h1>Pokemon Party Manager</h1>
-        <nav>
-                <a class="navButton" onclick = "startNewPokemon();" id="chooseYourPokemon">Add Team Member</a>
-                <a class="navButton" onclick = "showPoke1(poke1);" id="poke1button">Empty Teamslot 1</a>
-                <a class="navButton" onclick = "showPoke2(poke2);" id="poke2button">Empty Teamslot 2</a>
-                <a class="navButton" onclick = "showPoke3(poke3);" id="poke3button">Empty Teamslot 3</a>
-                <a class="navButton" onclick = "showPoke4(poke4);" id="poke4button">Empty Teamslot 4</a>
-                <a class="navButton" onclick = "showPoke5(poke5);" id="poke5button">Empty Teamslot 5</a>
-                <a class="navButton" onclick = "showPoke6(poke6);" id="poke6button">Empty Teamslot 6</a>
-        </nav>
-    </div>
-    <div data-role="main" class="ui-content">
+        <div class="jumbotron text-center">
+            <h1>Pokemon Party Manager</h1>
+            <nav>
+                    <a class="navButton" onclick = "startNewPokemon();" id="chooseYourPokemon">Add Team Member</a>
+                    <a class="navButton" onclick = "showPoke1(poke1);" id="poke1button">Empty Teamslot 1</a>
+                    <a class="navButton" onclick = "showPoke2(poke2);" id="poke2button">Empty Teamslot 2</a>
+                    <a class="navButton" onclick = "showPoke3(poke3);" id="poke3button">Empty Teamslot 3</a>
+                    <a class="navButton" onclick = "showPoke4(poke4);" id="poke4button">Empty Teamslot 4</a>
+                    <a class="navButton" onclick = "showPoke5(poke5);" id="poke5button">Empty Teamslot 5</a>
+                    <a class="navButton" onclick = "showPoke6(poke6);" id="poke6button">Empty Teamslot 6</a>
+            </nav>
+        </div>
+    <div data-role="main" class="container">
         <!-- <form id="chooseLocation" action="#" method="post">
                 <div>
                     <label for="locList">Where did you find the Pokemon?</label>
